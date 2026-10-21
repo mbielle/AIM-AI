@@ -1,0 +1,12 @@
+name = "aim-website-example"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-16"
+# Optional release-only R2 binding; create and configure your own bucket.
+# [[r2_buckets]]
+# binding = "AIM_RELEASE_BUCKET"
+# bucket_name = "your-approved-release-bucket"
+# Server variables must be set separately, without copying production secrets:
+# AIM_RELEASE_MAC_FILENAME, AIM_RELEASE_MAC_SHA256, AIM_RELEASE_MAC_ARCHIVES (JSON)
+# AIM_RELEASE_FEED_SHA256
+# Optional email compatibility: AIM_EMAIL_SERVICE_URL (HTTPS origin)
+# AIM_EMAIL_PUBLIC_API_KEY, only if the upstream email functions require it.

@@ -1,0 +1,26 @@
+project_id = "aim-open-source"
+[api]
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["aim://auth-callback", "aimmac://auth-callback"]
+[functions.aim-push]
+verify_jwt = true
+[functions.aim-push-worker]
+verify_jwt = false
+[functions.aim-release-monitor]
+verify_jwt = false
+[functions.export-user-data]
+verify_jwt = true
+[functions.delete-account]
+verify_jwt = true
+[functions.remote-unlock]
+verify_jwt = true

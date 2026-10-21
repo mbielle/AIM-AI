@@ -1,0 +1,15 @@
+# Notices futures proposées — non intégrées, non envoyées
+
+Aucun droit tiers résolu à ce checkpoint. Ce document ne remplace ni THIRD_PARTY_NOTICES.md, ni les notices embarquées, ni celles du candidat 56. Le MIT du projet ne couvre pas automatiquement les 45 fichiers.
+
+- OpenClaw : si le rattachement de l'illustration et la licence MIT applicable sont retenus après revue, conserver la notice complète de la révision exacte avec copyright OpenClaw Foundation 2026 et les éventuelles notices tierces liées. Les règles de marque et de présentation restent distinctes. Le nom du titulaire de licence n'est pas présenté comme auteur personnel certain du dessin.
+- Hermes : aucune attribution nouvelle certaine à ajouter; conserver les notices runtime existantes. Une permission/licence applicable à la variante conservée fixera le texte et les éventuelles conditions de template.
+- Vercel : si la voie de référence du guide Brands couvre le contexte et la variante, intégrer exactement l'attribution de son paragraphe Usage, accessible dans la source primaire, sans la remplacer par MIT. La conformité des sources et des notices du binaire doit être examinée séparément.
+- Supabase / Upstash : ne pas inscrire le PNG sous MIT à partir de package.json ou du serveur MCP seul. Fixer d'abord la licence ou permission applicable à l'illustration exacte; retenir ensuite son avis réel, sans inventer de crédit.
+- Autres marques : les avis d'appartenance exigés par leurs règles publiées seront retenus uniquement avec le fondement applicable, pas comme substitut de permission. Les conditions et pièces ciblées sont dans la matrice par fichier.
+
+Les brouillons existants demeurent privés et non envoyés. Les demandes extérieures vraiment motivées à ce checkpoint se limitent aux voies Cloudflare logo de connecteur, Microsoft corporate employé pour Microsoft 365 et HubSpot company logo/approbation de maquette si aucun accord existant ne les couvre. Le brouillon Box doit rester suspendu tant que sa voie publiée de menu de connexion n'est pas qualifiée. Aucune prise de contact, création de partenariat, souscription ou acceptation de contrat dans ce lot.
+
+Toute obligation manquante dans le DMG actuel exige un futur lot de distribution explicitement autorisé (notices, reconstruction et vérification). Une mise à jour documentaire ici ne rend pas le candidat 56 conforme par rétroactivité. Les sources v2 gelées ne sont pas modifiées.
+
+Instruction finale : Le propriétaire confirme le 21 octobre 2026 avoir déjà vérifié que les 45 fichiers représentent les logos officiels. Il demande de ne plus revérifier actuellement leur identité ou provenance visuelle. Confirmation déclarative acceptée pour ce lot; elle n’est pas une licence ni une permission de reproduction. Aucun futur lot général d’identité n’est proposé. Les termes de rattachement ou variante ci-dessus décrivent le dossier antérieur; ils ne prescrivent aucune nouvelle recherche d’identité. Les trois brouillons sont des options conditionnelles si la qualification de droits les rend utiles, pas des obligations légales universelles.

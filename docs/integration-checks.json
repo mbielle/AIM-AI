@@ -1,0 +1,168 @@
+{
+  "scope": "local source candidate with isolated-device owner observations; no official migration, paid inference or production deployment",
+  "checks": {
+    "core": {
+      "xctest": "Executed 358 tests, with 1 test skipped and 0 failures",
+      "swift_testing": "16 tests in 5 suites passed"
+    },
+    "macos": {
+      "targeted_headless_passed": 156,
+      "failed": 0,
+      "explicit_exclusions": [
+        "1 inherited headless Core Image QR image check"
+      ],
+      "full_historical_suite": false,
+      "latest_application_and_helper_build": "pass; no signing, install or launch"
+    },
+    "ios": {
+      "simulator_build_and_test_targets": "pass",
+      "local_profile_unit_tests": 7,
+      "local_profile_ui_tests": 3,
+      "capacity_targeted_tests": 4,
+      "oauth_capability_configuration_tests": 3,
+      "oauth_capability_ui_tests": 1,
+      "physical_device_qualification": false,
+      "project_document_unit_tests": 12,
+      "project_document_files_cancel_ui_tests": 1,
+      "final_google_resource_simulator_build": "pass; app and test targets arm64/x86_64"
+    },
+    "server_unit": {
+      "passed": 71,
+      "failed": 0,
+      "includes_optional_file_processor": true,
+      "includes_disposable_preparation": true
+    },
+    "server_database": {
+      "fresh_migrations": 40,
+      "assertion_groups": [
+        "PASS: native PIN bcrypt, token hashing, five-attempt lockout, owner/device/session checks and v2 retirement/lock cleanup",
+        "PASS: explicit native ACLs, no TRUNCATE/direct command insert, parent ownership, foreign pairing, transfer Storage, read-command bounds and account cascade",
+        "PASS: free Remote admission, wrong secret/token, revoked device/session, cross-account RLS, operations privilege",
+        "PASS: existing-installation upgrade, delegated authorization, legacy availability and rollback; historical data retained",
+        "PASS: native PIN bcrypt, token hashing, five-attempt lockout, owner/device/session checks and v2 retirement/lock cleanup",
+        "PASS: explicit native ACLs, no TRUNCATE/direct command insert, parent ownership, foreign pairing, transfer Storage, read-command bounds and account cascade",
+        "PASS: separate existing-installation maintenance/policy upgrade, scoped exporter, media liveness, native hardening and retained financial history"
+      ],
+      "full_supabase_stack_qualified": false
+    },
+    "server_types": "pass",
+    "website": {
+      "tests_passed": 16,
+      "strict_typescript_and_build": "pass",
+      "desktop_and_mobile_browser": "previous candidate inspected; latest resource/source-link changes not re-observed",
+      "public_deployment": false
+    },
+    "publication_scanner_selftests": {
+      "passed": 14
+    },
+    "mlx_license_packaging_tests": {
+      "passed": 4
+    },
+    "ci": "configured; no GitHub execution claimed",
+    "server_local_supabase": {
+      "runtime": "experimental native Supabase CLI 2.121.0",
+      "fresh_database": true,
+      "http_synthetic_clients_only": true,
+      "repeat_passed": 2,
+      "ok": true,
+      "failures": [],
+      "completed": [
+        "real_auth_two_accounts_three_sessions",
+        "postgrest_owner_rls_and_foreign_parent_rejection",
+        "scoped_document_rpc_and_export",
+        "authenticated_realtime_command_update",
+        "paired_authorized_http_command_and_encrypted_result_transport",
+        "real_storage_upload_download_and_cross_account_denial",
+        "edge_export_confirmation_deletion_isolation_and_legacy_pin_retirement",
+        "device_grant_and_auth_session_revocation"
+      ],
+      "cleanup": "synthetic_accounts_and_objects_removed",
+      "limits": [
+        "synthetic HTTP clients, not native applications",
+        "external OAuth, APNs and official-host migration not qualified by this command"
+      ]
+    },
+    "assets": {
+      "files": 239,
+      "documented_license_basis": 179,
+      "pending_third_party": 45,
+      "pending_owner_attribution": 15,
+      "checker_tests_passed": 8,
+      "source_release_gate": "blocks 60 pending reviews"
+    },
+    "publication_scanner_index": {
+      "files": 1523,
+      "text": 1291,
+      "binary_not_content_scanned": 232,
+      "exact_fixture_exceptions": 19,
+      "unreviewed_findings": 0
+    },
+    "project_workspace_20261017": {
+      "ios_local_unit_passed": 14,
+      "ios_project_unit_passed": 7,
+      "ios_ui_passed": 3,
+      "mac_targeted_passed": 32,
+      "failed": 0,
+      "source_originals_text_migration": "synthetic cases passed; new physical migration pending",
+      "source_tools": "mocked Anthropic/OpenRouter search/read loops passed; no paid inference",
+      "visual_screenshots_reviewed": 7,
+      "qualification_device_candidate": "2.0 (45), installed with targeted-copy hashes preserved; owner confirmations reported",
+      "previous_physical_owner_observations": [
+        "project/instructions restart on both apps",
+        "documents/text restart on both apps",
+        "iPhone import/cancel",
+        "build45 direct source import and separate drafts retained after restart",
+        "build45 project settings retained; source exclusion/reactivation"
+      ],
+      "official_update_or_publication_qualified": false,
+      "full_visual_owner_review": "pending; docs/UX_REVIEW_CHECKLIST.md"
+    },
+    "project_followup_20261017": {
+      "ios_targeted_unit_passed": 60,
+      "ios_unit_failed": 0,
+      "source_rename_core_cases_passed": 18,
+      "core_full_xctest": 336,
+      "core_full_skipped": 1,
+      "core_swift_testing": 16,
+      "ui_requalification": "six flows pass together; approval-binding delta swipe rerun",
+      "qualification_candidate": "2.0 (46), offline signed; identity/profile/entitlements verified; not installed",
+      "model_answer_qualified": false,
+      "real_provider_requests": 0,
+      "official_app_changed": false,
+      "full_visual_owner_review": "pending; docs/UX_REVIEW_CHECKLIST.md",
+      "unit_runs": [
+        {
+          "passed": 59,
+          "log": "/private/tmp/aim-project46-fixed-tests.log"
+        },
+        {
+          "passed": 5,
+          "additional_distinct": 1,
+          "log": "/private/tmp/aim-project46-preview-tests.log"
+        }
+      ],
+      "ios_ui_passed": 6,
+      "visual_screenshots_reviewed": 4
+    },
+    "web_costs_and_project_citations_20261017": {
+      "core_xctest_passed": 358,
+      "core_skipped": 1,
+      "core_swift_testing_passed": 16,
+      "ios_targeted_unit_passed": 64,
+      "ios_budget_cases": 10,
+      "ios_presentation_cases": 7,
+      "ios_ui_individually_passed": 3,
+      "ios_unit_final_log": "/private/tmp/aim-project47-final-unit.log",
+      "ios_ui_log": "/private/tmp/aim-project47-fixed-tests.log",
+      "ui_log_note": "three UI cases pass; earlier combined run included mock body-stream failures fixed in the final unit run",
+      "screenshots_reviewed": 3,
+      "provider_totals": "reported whole-request totals; no double counting; missing totals remain unknown",
+      "iphone_budget": "estimated web coverage by default; optional verified-maximum admission",
+      "mac_budget": "existing strict admission default retained",
+      "real_provider_requests_by_agent": 0,
+      "physical_source_answer_build46": "owner confirmed",
+      "candidate": "2.0 (47), offline signed, not installed",
+      "official_or_public_release_qualified": false
+    }
+  }
+}

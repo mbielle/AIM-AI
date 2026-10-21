@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "libdatachannel": {
+    "repository": "https://github.com/paullouisageneau/libdatachannel.git",
+    "commit": "6b1e2e620f1e37f0eafeee702eaea0043cb305fd",
+    "release": "v0.24.6",
+    "license": "MPL-2.0"
+  },
+  "mbedtls": {
+    "repository": "https://github.com/Mbed-TLS/mbedtls.git",
+    "commit": "0bebf8b8c7f07abe3571ded48a11aa907a1ffb20",
+    "release": "mbedtls-3.6.6",
+    "license": "Apache-2.0 OR GPL-2.0-or-later"
+  },
+  "patches": [
+    {
+      "file": "patches/relay-only-candidate-pairs.patch",
+      "sha256": "94aa1ee7a3424e83cd9800d4432c7aa2c2b493efcbc884e1202071c279753515",
+      "license": "MPL-2.0",
+      "purpose": "Enforce relay-only candidate pairs including peer-reflexive discovery; default ICE policy unchanged.",
+      "modifiedFiles": {
+        "src/impl/icetransport.cpp": "151b59a408341a10acb2f4f472bfab9644314ebdb7ee0d481d136494510d9d97",
+        "deps/libjuice/include/juice/juice.h": "f9f07b7aea407640e49d92e0f4ac3d4584dc3d813d9b421ff77d81310b90794e",
+        "deps/libjuice/src/agent.c": "eede927a7de474d09c1d6325a2e86aae87665520ac0721dc78e394612b1fe01b"
+      }
+    }
+  ]
+}

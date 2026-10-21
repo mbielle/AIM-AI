@@ -1,0 +1,3 @@
+interface:
+  display_name: "AIM Device Session"
+  short_description: "Operate an authorized physical test session"

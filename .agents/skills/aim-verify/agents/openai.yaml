@@ -1,0 +1,3 @@
+interface:
+  display_name: "AIM Verification"
+  short_description: "Run AIM checks and interpret their evidence"

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="fr"><meta charset="utf-8"><title>AIM — fixture navigateur</title>
+<body><h1>Fixture locale AIM</h1>
+<label>Texte <input id="text" value="é à 日本語"></label>
+<button id="increment" type="button">Incrémenter</button><output id="count">0</output>
+<button type="button" id="dialog">Ouvrir un dialogue</button>
+<label>Pièce jointe locale <input id="file" type="file"></label>
+<a download="fixture.txt" href="data:text/plain;charset=utf-8,Fixture%20AIM">Télécharger la fixture</a>
+<script>
+let count = 0;
+document.querySelector('#increment').onclick = () => document.querySelector('#count').textContent = String(++count);
+document.querySelector('#dialog').onclick = () => alert('Dialogue de test AIM');
+</script>
+</body></html>

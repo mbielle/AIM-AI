@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>com.aimai.macos.agenthost</string>
+<key>CFBundleExecutable</key><string>AIMAgentHost</string>
+<key>CFBundleName</key><string>AIM Agent Host</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>CFBundleVersion</key><string>1</string>
+<key>LSUIElement</key><true/>
+<key>LSMinimumSystemVersion</key><string>14.0</string>
+<key>NSAppleEventsUsageDescription</key><string>AIM performs approved automation for your continuous missions.</string>
+<key>NSContactsUsageDescription</key><string>AIM reads contacts for tasks you approve.</string>
+<key>NSCalendarsFullAccessUsageDescription</key><string>AIM accesses calendars for tasks you approve.</string>
+<key>NSRemindersFullAccessUsageDescription</key><string>AIM accesses reminders for tasks you approve.</string>
+</dict></plist>

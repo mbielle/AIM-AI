@@ -1,0 +1,3 @@
+interface:
+  display_name: "AIM Remote QA"
+  short_description: "Qualify isolated Mac and iPhone Remote flows"

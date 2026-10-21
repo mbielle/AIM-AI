@@ -1,0 +1,900 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+        D14800000000000000000001 /* DirectNativeNotices in Resources */ = {isa = PBXBuildFile; fileRef = D14800000000000000000002; };
+        D14700000000000000000001 /* AIMQAClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14700000000000000000002; };
+        D14600000000000000000006 /* HybridResearchStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14600000000000000000007; };
+        D14600000000000000000001 /* AIMDirectConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14600000000000000000002; };
+        D14600000000000000000003 /* AIMDirectNative in Frameworks */ = {isa = PBXBuildFile; productRef = D14600000000000000000004; };
+		B30000000000000000000052 /* AIMPendingInteractionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000052; };
+		B61111111111111111111101 /* LocalExperienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61111111111111111111101; };
+		B30000000000000000000051 /* AIMVisualApprovalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000051; };
+		B30000000000000000000050 /* AIMConversationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000050; };
+		B4000000000000000000000C /* NativeMemoryCaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4000000000000000000000C; };
+		B4000000000000000000000B /* NativeChatStoreAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4000000000000000000000B; };
+		B4000000000000000000000A /* AIMWebConnectorStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4000000000000000000000A; };
+		B40000000000000000000009 /* AIMAccountActivityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000009; };
+		B40000000000000000000008 /* AIMVoiceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000008; };
+		B40000000000000000000007 /* AIMVoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000007; };
+		B40000000000000000000006 /* AIMConnectorSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000006; };
+		B40000000000000000000005 /* AIMNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000005; };
+		B40000000000000000000004 /* AIMDataOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000004; };
+		B40000000000000000000003 /* AIMAccountSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000003; };
+		B40000000000000000000002 /* AIMProviderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000002; };
+		B40000000000000000000001 /* AIMSettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40000000000000000000001; };
+		B30000000000000000000003 /* AIMNativeSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000003; };
+		B30000000000000000000002 /* AIMNativeChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000002; };
+		B30000000000000000000001 /* NativeChatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000001; };
+		B20000000000000000000001 /* AIMKeyboardLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20000000000000000000001 /* AIMKeyboardLab.swift */; };
+		B10000000000000000000001 /* AIMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000001 /* AIMApp.swift */; };
+		B10000000000000000000002 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000002 /* AppEnvironment.swift */; };
+		B10000000000000000000003 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000003 /* RootView.swift */; };
+		B10000000000000000000004 /* ConfigurationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000004 /* ConfigurationErrorView.swift */; };
+		B10000000000000000000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000005 /* Assets.xcassets */; };
+		B10000000000000000000006 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000006 /* Localizable.xcstrings */; };
+		B10000000000000000000007 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000007 /* PrivacyInfo.xcprivacy */; };
+		B10000000000000000000008 /* AIMCore in Frameworks */ = {isa = PBXBuildFile; productRef = SP1000000000000000000001 /* AIMCore */; };
+		B10000000000000000000009 /* BundleConfigurationLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000009 /* BundleConfigurationLoaderTests.swift */; };
+		B1000000000000000000000A /* AIMCore in Frameworks */ = {isa = PBXBuildFile; productRef = SP1000000000000000000002 /* AIMCore */; };
+		B1000000000000000000000B /* AIMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000A /* AIMUITests.swift */; };
+		B1000000000000000000000C /* SessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000000F /* SessionStoreTests.swift */; };
+		B1000000000000000000000D /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000010 /* SessionStore.swift */; };
+		B1000000000000000000000E /* WebAuthenticationSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000014 /* WebAuthenticationSessionClient.swift */; };
+		B1000000000000000000000F /* AuthenticationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000015 /* AuthenticationRootView.swift */; };
+		B10000000000000000000010 /* UITestAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000016 /* UITestAuthenticationService.swift */; };
+		B10000000000000000000011 /* MainExperienceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000018 /* MainExperienceStore.swift */; };
+		B10000000000000000000012 /* MainExperienceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000019 /* MainExperienceView.swift */; };
+		B10000000000000000000013 /* MainExperienceStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001A /* MainExperienceStoreTests.swift */; };
+		B10000000000000000000014 /* AIMDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001B /* AIMDesignSystem.swift */; };
+		B10000000000000000000015 /* Lora-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001C /* Lora-Variable.ttf */; };
+		B10000000000000000000016 /* OFL-Lora.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001D /* OFL-Lora.txt */; };
+		B10000000000000000000017 /* Lucide-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001E /* Lucide-LICENSE.txt */; };
+		B10000000000000000000018 /* AIMSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000000000000000000001F /* AIMSettingsPanel.swift */; };
+		B10000000000000000000019 /* AIMConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000020 /* AIMConversationView.swift */; };
+		B1000000000000000000001A /* AIMNewRemoteSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000021 /* AIMNewRemoteSessionView.swift */; };
+		B1000000000000000000001B /* AIMSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000022 /* AIMSearchView.swift */; };
+		B1000000000000000000001C /* AIMCloudContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000023 /* AIMCloudContentView.swift */; };
+		B1000000000000000000001D /* AIMPersonalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000024 /* AIMPersonalizationView.swift */; };
+		B1000000000000000000001E /* AIMSpeechTranscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000025 /* AIMSpeechTranscriber.swift */; };
+		B1000000000000000000001F /* ModelLogos in Resources */ = {isa = PBXBuildFile; fileRef = F10000000000000000000026 /* ModelLogos */; };
+		212CF7040370A34A09F0DEFF /* AIMNativeProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114734EFE950E3521DC14E69; };
+		187BB41AAC372CAD0147E5DA /* AIMBrandLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C4AC0EFD2295E3148AC66; };
+		7DA42266160A06350E3584CE /* AIMConnectorDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A985CE770AA7EE6A7D7A9497; };
+		975EE366B6A37A2295BC6DC5 /* AIMSkillsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE916AAA0A8A985546AACF7; };
+		31E264550A69FF06718FD4CB /* AIMMediaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947C5AA79765B57820C23535; };
+		6C583767EBB6331322EEDEA5 /* AIMMediaCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BB5C5AB47C3E73CFEA114; };
+		AA3E05719696135328D192FF /* AIMBrandLogoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910605D7B5617EFC9E2F6CEB; };
+		9A7BEE9BB0E2A7EA367EA478 /* AIMBFLProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20C142B2D4800A77F772642; };
+		677D63E5B71A418B13E13D9F /* AIMMediaStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F23300AA76D5EF83013278; };
+		12D4313FD537B8E634A0BE66 /* AIMComputerConnectionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4CC2D8B1A44287544D4FB1; };
+		B22000000000000000000001 /* AIMRemoteDownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22000000000000000000001; };
+		BB1111111111111111111101 /* LocalExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1111111111111111111101; };
+		B30000000000000000000061 /* AIMProjectDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000061; };
+		B30000000000000000000062 /* AIMProjectDocumentViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000062; };
+		B30000000000000000000063 /* AIMUnifiedModelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30000000000000000000063; };
+		BDA8476523EBCF8D6EEB698E /* AIMNativeProjectHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6601BA306FF175BEE034F; };
+		A9BCFA1D9160D7AFD04781D0 /* AIMProjectEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD06F2410663BEE02A6AF11; };
+		E2BC6179C2796271DBA698F2 /* AIMProjectSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F736F6A595002EA32EF591; };
+		DB28ECAB8FFC0DD1BA12C7D0 /* AIMProjectSourceSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85915FA7B753A722CCFC365; };
+		B71111111111111111111101 /* ProjectHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71111111111111111111101; };
+		6BD1D4BED26C486AB9B268B9 /* AIMProjectRelativeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E414EEDF79414D999A7E46D9; };
+		EEBD36B06D8F403CA91BAED1 /* AIMNativeChatErrorNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0E909076943859E0FE847; };
+		C3041588D13346ECA3FC33BF /* ProjectPresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C475499AC4844A8AAA7F2EF; };
+		D2ABF6344AE94B6486AB8D60 /* ProjectBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221EF2C7D0543879B5D08A8; };
+		AA5C6E16F62E4531B7B941F1 /* AIMProjectNavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830E72165F34146B6E8EF67; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D10000000000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000001;
+			remoteInfo = AIM;
+		};
+		D10000000000000000000004 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000001;
+			remoteInfo = AIM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+        D14800000000000000000002 /* DirectNativeNotices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DirectNativeNotices; sourceTree = "<group>"; };
+        D14700000000000000000002 /* AIMQAClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMQAClientView.swift"; sourceTree = SOURCE_ROOT; };
+        D14600000000000000000007 /* HybridResearchStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridResearchStoreTests.swift; sourceTree = "<group>"; };
+        D14600000000000000000002 /* AIMDirectConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMDirectConnectionView.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000052 /* AIMPendingInteractionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMPendingInteractionViews.swift"; sourceTree = SOURCE_ROOT; };
+		F61111111111111111111101 /* LocalExperienceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalExperienceTests.swift; sourceTree = "<group>"; };
+		F30000000000000000000051 /* AIMVisualApprovalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMVisualApprovalView.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000050 /* AIMConversationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMConversationActions.swift"; sourceTree = SOURCE_ROOT; };
+		F4000000000000000000000C /* NativeMemoryCaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeMemoryCaptureTests.swift; sourceTree = "<group>"; };
+		F4000000000000000000000B /* NativeChatStoreAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeChatStoreAccountTests.swift; sourceTree = "<group>"; };
+		F4000000000000000000000A /* AIMWebConnectorStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMWebConnectorStoreTests.swift; sourceTree = "<group>"; };
+		F40000000000000000000009 /* AIMAccountActivityImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMAccountActivityImportView.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000008 /* AIMVoiceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMVoiceSettingsView.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000007 /* AIMVoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/AIMVoiceController.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000006 /* AIMConnectorSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMConnectorSettingsViews.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000005 /* AIMNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/AIMNotificationCenter.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000004 /* AIMDataOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMDataOverviewView.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000003 /* AIMAccountSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMAccountSettingsViews.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000002 /* AIMProviderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProviderDetailView.swift"; sourceTree = SOURCE_ROOT; };
+		F40000000000000000000001 /* AIMSettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMSettingsComponents.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000003 /* AIMNativeSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMNativeSettingsViews.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000002 /* AIMNativeChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMNativeChatView.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000001 /* NativeChatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/NativeChatStore.swift"; sourceTree = SOURCE_ROOT; };
+		F20000000000000000000001 /* AIMKeyboardLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMKeyboardLab.swift; sourceTree = "<group>"; };
+		F10000000000000000000001 /* AIMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMApp.swift; sourceTree = "<group>"; };
+		F10000000000000000000002 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		F10000000000000000000003 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F10000000000000000000004 /* ConfigurationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationErrorView.swift; sourceTree = "<group>"; };
+		F10000000000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10000000000000000000006 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F10000000000000000000007 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F10000000000000000000008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10000000000000000000009 /* BundleConfigurationLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleConfigurationLoaderTests.swift; sourceTree = "<group>"; };
+		F1000000000000000000000A /* AIMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMUITests.swift; sourceTree = "<group>"; };
+		F1000000000000000000000B /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		F1000000000000000000000C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		F1000000000000000000000D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		F1000000000000000000000E /* Secrets.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig.example; sourceTree = "<group>"; };
+		F1000000000000000000000F /* SessionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStoreTests.swift; sourceTree = "<group>"; };
+		F10000000000000000000010 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		F10000000000000000000011 /* AIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000012 /* AIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000013 /* AIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10000000000000000000014 /* WebAuthenticationSessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuthenticationSessionClient.swift; sourceTree = "<group>"; };
+		F10000000000000000000015 /* AuthenticationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRootView.swift; sourceTree = "<group>"; };
+		F10000000000000000000016 /* UITestAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestAuthenticationService.swift; sourceTree = "<group>"; };
+		F10000000000000000000017 /* AIM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIM.entitlements; sourceTree = "<group>"; };
+		F10000000000000000000018 /* MainExperienceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExperienceStore.swift; sourceTree = "<group>"; };
+		F10000000000000000000019 /* MainExperienceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExperienceView.swift; sourceTree = "<group>"; };
+		F1000000000000000000001A /* MainExperienceStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainExperienceStoreTests.swift; sourceTree = "<group>"; };
+		F1000000000000000000001B /* AIMDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMDesignSystem.swift; sourceTree = "<group>"; };
+		F1000000000000000000001C /* Lora-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Variable.ttf"; sourceTree = "<group>"; };
+		F1000000000000000000001D /* OFL-Lora.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-Lora.txt"; sourceTree = "<group>"; };
+		F1000000000000000000001E /* Lucide-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Lucide-LICENSE.txt"; sourceTree = "<group>"; };
+		F1000000000000000000001F /* AIMSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMSettingsPanel.swift; sourceTree = "<group>"; };
+		F10000000000000000000020 /* AIMConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMConversationView.swift; sourceTree = "<group>"; };
+		F10000000000000000000021 /* AIMNewRemoteSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMNewRemoteSessionView.swift; sourceTree = "<group>"; };
+		F10000000000000000000022 /* AIMSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMSearchView.swift; sourceTree = "<group>"; };
+		F10000000000000000000023 /* AIMCloudContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMCloudContentView.swift; sourceTree = "<group>"; };
+		F10000000000000000000024 /* AIMPersonalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMPersonalizationView.swift; sourceTree = "<group>"; };
+		F10000000000000000000025 /* AIMSpeechTranscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIMSpeechTranscriber.swift; sourceTree = "<group>"; };
+		F10000000000000000000026 /* ModelLogos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ModelLogos; sourceTree = "<group>"; };
+		114734EFE950E3521DC14E69 /* AIMNativeProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMNativeProjectsView.swift"; sourceTree = SOURCE_ROOT; };
+		6D6C4AC0EFD2295E3148AC66 /* AIMBrandLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMBrandLogo.swift"; sourceTree = SOURCE_ROOT; };
+		A985CE770AA7EE6A7D7A9497 /* AIMConnectorDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMConnectorDirectoryView.swift"; sourceTree = SOURCE_ROOT; };
+		3BE916AAA0A8A985546AACF7 /* AIMSkillsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/AIMSkillsStore.swift"; sourceTree = SOURCE_ROOT; };
+		947C5AA79765B57820C23535 /* AIMMediaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/AIMMediaStore.swift"; sourceTree = SOURCE_ROOT; };
+		AC9BB5C5AB47C3E73CFEA114 /* AIMMediaCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMMediaCreatorView.swift"; sourceTree = SOURCE_ROOT; };
+		910605D7B5617EFC9E2F6CEB /* AIMBrandLogoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIMTests/AIMBrandLogoTests.swift"; sourceTree = SOURCE_ROOT; };
+		C20C142B2D4800A77F772642 /* AIMBFLProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMBFLProviderView.swift"; sourceTree = SOURCE_ROOT; };
+		E9F23300AA76D5EF83013278 /* AIMMediaStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIMTests/AIMMediaStoreTests.swift"; sourceTree = SOURCE_ROOT; };
+		BC4CC2D8B1A44287544D4FB1 /* AIMComputerConnectionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMComputerConnectionViews.swift"; sourceTree = SOURCE_ROOT; };
+		F22000000000000000000001 /* AIMRemoteDownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMRemoteDownloadsView.swift"; sourceTree = SOURCE_ROOT; };
+		FB1111111111111111111101 /* LocalExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/LocalExperience.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000061 /* AIMProjectDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/App/AIMProjectDocuments.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000062 /* AIMProjectDocumentViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProjectDocumentViews.swift"; sourceTree = SOURCE_ROOT; };
+		F30000000000000000000063 /* AIMUnifiedModelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMUnifiedModelPicker.swift"; sourceTree = SOURCE_ROOT; };
+		BDB6601BA306FF175BEE034F /* AIMNativeProjectHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMNativeProjectHomeView.swift"; sourceTree = SOURCE_ROOT; };
+		6FD06F2410663BEE02A6AF11 /* AIMProjectEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProjectEditors.swift"; sourceTree = SOURCE_ROOT; };
+		F1F736F6A595002EA32EF591 /* AIMProjectSourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProjectSourcesView.swift"; sourceTree = SOURCE_ROOT; };
+		D85915FA7B753A722CCFC365 /* AIMProjectSourceSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProjectSourceSheets.swift"; sourceTree = SOURCE_ROOT; };
+		F71111111111111111111101 /* ProjectHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHomeTests.swift; sourceTree = "<group>"; };
+		E414EEDF79414D999A7E46D9 /* AIMProjectRelativeDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMProjectRelativeDate.swift"; sourceTree = SOURCE_ROOT; };
+		46A0E909076943859E0FE847 /* AIMNativeChatErrorNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIM/Features/Main/AIMNativeChatErrorNotice.swift"; sourceTree = SOURCE_ROOT; };
+		8C475499AC4844A8AAA7F2EF /* ProjectPresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIMTests/ProjectPresentationTests.swift"; sourceTree = SOURCE_ROOT; };
+		1221EF2C7D0543879B5D08A8 /* ProjectBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIMTests/ProjectBudgetTests.swift"; sourceTree = SOURCE_ROOT; };
+		F830E72165F34146B6E8EF67 /* AIMProjectNavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AIMUITests/AIMProjectNavigationUITests.swift"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		PH1000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000008 /* AIMCore in Frameworks */,
+                D14600000000000000000003 /* AIMDirectNative in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000A /* AIMCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000002 /* Config */,
+				G10000000000000000000003 /* AIM */,
+				G10000000000000000000009 /* AIMTests */,
+				G1000000000000000000000A /* AIMUITests */,
+				G1000000000000000000000B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G10000000000000000000002 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000B /* Base.xcconfig */,
+				F1000000000000000000000C /* Debug.xcconfig */,
+				F1000000000000000000000D /* Release.xcconfig */,
+				F1000000000000000000000E /* Secrets.xcconfig.example */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000003 /* AIM */ = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000004 /* App */,
+				G1000000000000000000000C /* Authentication */,
+				G10000000000000000000005 /* Features */,
+				G10000000000000000000007 /* Resources */,
+				G10000000000000000000008 /* Supporting */,
+			);
+			path = AIM;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000001 /* AIMApp.swift */,
+				BC4CC2D8B1A44287544D4FB1 /* AIMComputerConnectionViews.swift */,
+                D14600000000000000000002 /* AIMDirectConnectionView.swift */,
+                D14700000000000000000002 /* AIMQAClientView.swift */,
+				F22000000000000000000001 /* AIMRemoteDownloadsView.swift */,
+				C20C142B2D4800A77F772642 /* AIMBFLProviderView.swift */,
+				AC9BB5C5AB47C3E73CFEA114 /* AIMMediaCreatorView.swift */,
+				947C5AA79765B57820C23535 /* AIMMediaStore.swift */,
+				3BE916AAA0A8A985546AACF7 /* AIMSkillsStore.swift */,
+				A985CE770AA7EE6A7D7A9497 /* AIMConnectorDirectoryView.swift */,
+				6D6C4AC0EFD2295E3148AC66 /* AIMBrandLogo.swift */,
+				114734EFE950E3521DC14E69 /* AIMNativeProjectsView.swift */,
+				F30000000000000000000003 /* AIMNativeSettingsViews.swift */,
+				F40000000000000000000006 /* AIMConnectorSettingsViews.swift */,
+				F40000000000000000000007 /* AIMVoiceController.swift */,
+				F40000000000000000000008 /* AIMVoiceSettingsView.swift */,
+				F40000000000000000000005 /* AIMNotificationCenter.swift */,
+				F40000000000000000000004 /* AIMDataOverviewView.swift */,
+				F40000000000000000000009 /* AIMAccountActivityImportView.swift */,
+				F40000000000000000000003 /* AIMAccountSettingsViews.swift */,
+				F40000000000000000000002 /* AIMProviderDetailView.swift */,
+				F40000000000000000000001 /* AIMSettingsComponents.swift */,
+				F30000000000000000000002 /* AIMNativeChatView.swift */,
+				46A0E909076943859E0FE847 /* AIMNativeChatErrorNotice.swift */,
+				F30000000000000000000051 /* AIMVisualApprovalView.swift */,
+				F30000000000000000000050 /* AIMConversationActions.swift */,
+				F30000000000000000000001 /* NativeChatStore.swift */,
+				FB1111111111111111111101 /* LocalExperience.swift */,
+				F20000000000000000000001 /* AIMKeyboardLab.swift */,
+				F10000000000000000000002 /* AppEnvironment.swift */,
+				F10000000000000000000003 /* RootView.swift */,
+				F10000000000000000000010 /* SessionStore.swift */,
+				F10000000000000000000018 /* MainExperienceStore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000005 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				G1000000000000000000000D /* Authentication */,
+				G10000000000000000000006 /* Configuration */,
+				G1000000000000000000000E /* Main */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000006 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000004 /* ConfigurationErrorView.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+                D14800000000000000000002 /* DirectNativeNotices */,
+				G1000000000000000000000F /* Fonts */,
+				G10000000000000000000010 /* Licenses */,
+				F10000000000000000000026 /* ModelLogos */,
+				F10000000000000000000005 /* Assets.xcassets */,
+				F10000000000000000000006 /* Localizable.xcstrings */,
+				F10000000000000000000007 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000001C /* Lora-Variable.ttf */,
+				F1000000000000000000001D /* OFL-Lora.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000010 /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000001E /* Lucide-LICENSE.txt */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000008 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000008 /* Info.plist */,
+				F10000000000000000000017 /* AIM.entitlements */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000009 /* AIMTests */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000009 /* BundleConfigurationLoaderTests.swift */,
+                D14600000000000000000007 /* HybridResearchStoreTests.swift */,
+				F1000000000000000000000F /* SessionStoreTests.swift */,
+				F1000000000000000000001A /* MainExperienceStoreTests.swift */,
+				E9F23300AA76D5EF83013278 /* AIMMediaStoreTests.swift */,
+				910605D7B5617EFC9E2F6CEB /* AIMBrandLogoTests.swift */,
+				F4000000000000000000000A /* AIMWebConnectorStoreTests.swift */,
+				F4000000000000000000000B /* NativeChatStoreAccountTests.swift */,
+				F61111111111111111111101 /* LocalExperienceTests.swift */,
+				F71111111111111111111101 /* ProjectHomeTests.swift */,
+				1221EF2C7D0543879B5D08A8 /* ProjectBudgetTests.swift */,
+				8C475499AC4844A8AAA7F2EF /* ProjectPresentationTests.swift */,
+				F4000000000000000000000C /* NativeMemoryCaptureTests.swift */,
+			);
+			path = AIMTests;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000A /* AIMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000000A /* AIMUITests.swift */,
+				F830E72165F34146B6E8EF67 /* AIMProjectNavigationUITests.swift */,
+			);
+			path = AIMUITests;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000011 /* AIM.app */,
+				F10000000000000000000012 /* AIMTests.xctest */,
+				F10000000000000000000013 /* AIMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000014 /* WebAuthenticationSessionClient.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F10000000000000000000015 /* AuthenticationRootView.swift */,
+				F10000000000000000000016 /* UITestAuthenticationService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F1000000000000000000001B /* AIMDesignSystem.swift */,
+				F1000000000000000000001F /* AIMSettingsPanel.swift */,
+				F10000000000000000000020 /* AIMConversationView.swift */,
+				F30000000000000000000061 /* AIMProjectDocuments.swift */,
+				F30000000000000000000062 /* AIMProjectDocumentViews.swift */,
+				D85915FA7B753A722CCFC365 /* AIMProjectSourceSheets.swift */,
+				F1F736F6A595002EA32EF591 /* AIMProjectSourcesView.swift */,
+				6FD06F2410663BEE02A6AF11 /* AIMProjectEditors.swift */,
+				BDB6601BA306FF175BEE034F /* AIMNativeProjectHomeView.swift */,
+				E414EEDF79414D999A7E46D9 /* AIMProjectRelativeDate.swift */,
+				F30000000000000000000063 /* AIMUnifiedModelPicker.swift */,
+				F30000000000000000000052 /* AIMPendingInteractionViews.swift */,
+				F10000000000000000000021 /* AIMNewRemoteSessionView.swift */,
+				F10000000000000000000022 /* AIMSearchView.swift */,
+				F10000000000000000000023 /* AIMCloudContentView.swift */,
+				F10000000000000000000024 /* AIMPersonalizationView.swift */,
+				F10000000000000000000025 /* AIMSpeechTranscriber.swift */,
+				F10000000000000000000019 /* MainExperienceView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000001 /* AIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL10000000000000000000002 /* Build configuration list for PBXNativeTarget "AIM" */;
+			buildPhases = (
+				PH1000000000000000000001 /* Sources */,
+				PH1000000000000000000002 /* Frameworks */,
+				PH1000000000000000000003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AIM;
+			packageProductDependencies = (
+				SP1000000000000000000001 /* AIMCore */,
+                D14600000000000000000004 /* AIMDirectNative */,
+			);
+			productName = AIM;
+			productReference = F10000000000000000000011 /* AIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A10000000000000000000002 /* AIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL10000000000000000000003 /* Build configuration list for PBXNativeTarget "AIMTests" */;
+			buildPhases = (
+				PH1000000000000000000004 /* Sources */,
+				PH1000000000000000000005 /* Frameworks */,
+				PH1000000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D10000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = AIMTests;
+			packageProductDependencies = (
+				SP1000000000000000000002 /* AIMCore */,
+			);
+			productName = AIMTests;
+			productReference = F10000000000000000000012 /* AIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A10000000000000000000003 /* AIMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL10000000000000000000004 /* Build configuration list for PBXNativeTarget "AIMUITests" */;
+			buildPhases = (
+				PH1000000000000000000007 /* Sources */,
+				PH1000000000000000000008 /* Frameworks */,
+				PH1000000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D10000000000000000000003 /* PBXTargetDependency */,
+			);
+			name = AIMUITests;
+			packageProductDependencies = (
+			);
+			productName = AIMUITests;
+			productReference = F10000000000000000000013 /* AIMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					A10000000000000000000001 = {
+						CreatedOnToolsVersion = 27.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SignInWithApple = {
+								enabled = 1;
+							};
+						};
+					};
+					A10000000000000000000002 = {
+						CreatedOnToolsVersion = 27.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A10000000000000000000001;
+					};
+					A10000000000000000000003 = {
+						CreatedOnToolsVersion = 27.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A10000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = CL10000000000000000000001 /* Build configuration list for PBXProject "AIM" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				Base,
+			);
+			mainGroup = G10000000000000000000001;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				PK1000000000000000000001 /* XCLocalSwiftPackageReference "Packages/AIMCore" */,
+                D14600000000000000000005 /* XCLocalSwiftPackageReference "AIMDirectNative" */,
+			);
+			productRefGroup = G1000000000000000000000B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000001 /* AIM */,
+				A10000000000000000000002 /* AIMTests */,
+				A10000000000000000000003 /* AIMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		PH1000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D14800000000000000000001 /* DirectNativeNotices in Resources */,
+                B10000000000000000000005 /* Assets.xcassets in Resources */,
+				B10000000000000000000006 /* Localizable.xcstrings in Resources */,
+				B10000000000000000000007 /* PrivacyInfo.xcprivacy in Resources */,
+				B10000000000000000000015 /* Lora-Variable.ttf in Resources */,
+				B10000000000000000000016 /* OFL-Lora.txt in Resources */,
+				B10000000000000000000017 /* Lucide-LICENSE.txt in Resources */,
+				B1000000000000000000001F /* ModelLogos in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		PH1000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000001 /* AIMApp.swift in Sources */,
+				12D4313FD537B8E634A0BE66 /* AIMComputerConnectionViews.swift in Sources */,
+                D14600000000000000000001 /* AIMDirectConnectionView.swift in Sources */,
+                D14700000000000000000001 /* AIMQAClientView.swift in Sources */,
+				B22000000000000000000001 /* AIMRemoteDownloadsView.swift in Sources */,
+				9A7BEE9BB0E2A7EA367EA478 /* AIMBFLProviderView.swift in Sources */,
+				6C583767EBB6331322EEDEA5 /* AIMMediaCreatorView.swift in Sources */,
+				31E264550A69FF06718FD4CB /* AIMMediaStore.swift in Sources */,
+				975EE366B6A37A2295BC6DC5 /* AIMSkillsStore.swift in Sources */,
+				7DA42266160A06350E3584CE /* AIMConnectorDirectoryView.swift in Sources */,
+				187BB41AAC372CAD0147E5DA /* AIMBrandLogo.swift in Sources */,
+				212CF7040370A34A09F0DEFF /* AIMNativeProjectsView.swift in Sources */,
+				B30000000000000000000003 /* AIMNativeSettingsViews.swift in Sources */,
+				B40000000000000000000006 /* AIMConnectorSettingsViews.swift in Sources */,
+				B40000000000000000000007 /* AIMVoiceController.swift in Sources */,
+				B40000000000000000000008 /* AIMVoiceSettingsView.swift in Sources */,
+				B40000000000000000000005 /* AIMNotificationCenter.swift in Sources */,
+				B40000000000000000000004 /* AIMDataOverviewView.swift in Sources */,
+				B40000000000000000000009 /* AIMAccountActivityImportView.swift in Sources */,
+				B40000000000000000000003 /* AIMAccountSettingsViews.swift in Sources */,
+				B40000000000000000000002 /* AIMProviderDetailView.swift in Sources */,
+				B40000000000000000000001 /* AIMSettingsComponents.swift in Sources */,
+				B30000000000000000000002 /* AIMNativeChatView.swift in Sources */,
+				EEBD36B06D8F403CA91BAED1 /* AIMNativeChatErrorNotice.swift in Sources */,
+				B30000000000000000000051 /* AIMVisualApprovalView.swift in Sources */,
+				B30000000000000000000050 /* AIMConversationActions.swift in Sources */,
+				B30000000000000000000001 /* NativeChatStore.swift in Sources */,
+				BB1111111111111111111101 /* LocalExperience.swift in Sources */,
+				B20000000000000000000001 /* AIMKeyboardLab.swift in Sources */,
+				B10000000000000000000002 /* AppEnvironment.swift in Sources */,
+				B10000000000000000000003 /* RootView.swift in Sources */,
+				B10000000000000000000004 /* ConfigurationErrorView.swift in Sources */,
+				B1000000000000000000000D /* SessionStore.swift in Sources */,
+				B1000000000000000000000E /* WebAuthenticationSessionClient.swift in Sources */,
+				B1000000000000000000000F /* AuthenticationRootView.swift in Sources */,
+				B10000000000000000000010 /* UITestAuthenticationService.swift in Sources */,
+				B10000000000000000000011 /* MainExperienceStore.swift in Sources */,
+				B10000000000000000000014 /* AIMDesignSystem.swift in Sources */,
+				B10000000000000000000018 /* AIMSettingsPanel.swift in Sources */,
+				B10000000000000000000019 /* AIMConversationView.swift in Sources */,
+				B30000000000000000000061 /* AIMProjectDocuments.swift in Sources */,
+				B30000000000000000000062 /* AIMProjectDocumentViews.swift in Sources */,
+				DB28ECAB8FFC0DD1BA12C7D0 /* AIMProjectSourceSheets.swift in Sources */,
+				E2BC6179C2796271DBA698F2 /* AIMProjectSourcesView.swift in Sources */,
+				A9BCFA1D9160D7AFD04781D0 /* AIMProjectEditors.swift in Sources */,
+				BDA8476523EBCF8D6EEB698E /* AIMNativeProjectHomeView.swift in Sources */,
+				6BD1D4BED26C486AB9B268B9 /* AIMProjectRelativeDate.swift in Sources */,
+				B30000000000000000000063 /* AIMUnifiedModelPicker.swift in Sources */,
+				B30000000000000000000052 /* AIMPendingInteractionViews.swift in Sources */,
+				B1000000000000000000001A /* AIMNewRemoteSessionView.swift in Sources */,
+				B1000000000000000000001B /* AIMSearchView.swift in Sources */,
+				B1000000000000000000001C /* AIMCloudContentView.swift in Sources */,
+				B1000000000000000000001D /* AIMPersonalizationView.swift in Sources */,
+				B1000000000000000000001E /* AIMSpeechTranscriber.swift in Sources */,
+				B10000000000000000000012 /* MainExperienceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10000000000000000000009 /* BundleConfigurationLoaderTests.swift in Sources */,
+                D14600000000000000000006 /* HybridResearchStoreTests.swift in Sources */,
+				B1000000000000000000000C /* SessionStoreTests.swift in Sources */,
+				677D63E5B71A418B13E13D9F /* AIMMediaStoreTests.swift in Sources */,
+				AA3E05719696135328D192FF /* AIMBrandLogoTests.swift in Sources */,
+				B10000000000000000000013 /* MainExperienceStoreTests.swift in Sources */,
+				B4000000000000000000000A /* AIMWebConnectorStoreTests.swift in Sources */,
+				B4000000000000000000000B /* NativeChatStoreAccountTests.swift in Sources */,
+				B61111111111111111111101 /* LocalExperienceTests.swift in Sources */,
+				B71111111111111111111101 /* ProjectHomeTests.swift in Sources */,
+				D2ABF6344AE94B6486AB8D60 /* ProjectBudgetTests.swift in Sources */,
+				C3041588D13346ECA3FC33BF /* ProjectPresentationTests.swift in Sources */,
+				B4000000000000000000000C /* NativeMemoryCaptureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		PH1000000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1000000000000000000000B /* AIMUITests.swift in Sources */,
+				AA5C6E16F62E4531B7B941F1 /* AIMProjectNavigationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D10000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000001 /* AIM */;
+			targetProxy = D10000000000000000000002 /* PBXContainerItemProxy */;
+		};
+		D10000000000000000000003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000001 /* AIM */;
+			targetProxy = D10000000000000000000004 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C10000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1000000000000000000000C /* Debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C10000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1000000000000000000000D /* Release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				AIM_APNS_ENVIRONMENT = development;
+				AIM_DISPLAY_NAME = AIM.AI;
+				AIM_APNS_SERVER_ENVIRONMENT = sandbox;
+				CODE_SIGN_ENTITLEMENTS = AIM/Supporting/AIM.entitlements;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AIM/Supporting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(AIM_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				AIM_DISPLAY_NAME = AIM.AI;
+				CODE_SIGN_ENTITLEMENTS = AIM/Supporting/AIM.entitlements;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AIM/Supporting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(AIM_APP_BUNDLE_IDENTIFIER)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C10000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimai.ios.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AIM";
+			};
+			name = Debug;
+		};
+		C10000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimai.ios.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AIM";
+			};
+			name = Release;
+		};
+		C10000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimai.ios.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AIM;
+			};
+			name = Debug;
+		};
+		C10000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aimai.ios.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AIM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL10000000000000000000001 /* Build configuration list for PBXProject "AIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000001 /* Debug */,
+				C10000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL10000000000000000000002 /* Build configuration list for PBXNativeTarget "AIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000003 /* Debug */,
+				C10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL10000000000000000000003 /* Build configuration list for PBXNativeTarget "AIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000005 /* Debug */,
+				C10000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CL10000000000000000000004 /* Build configuration list for PBXNativeTarget "AIMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10000000000000000000007 /* Debug */,
+				C10000000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+        D14600000000000000000005 /* XCLocalSwiftPackageReference "AIMDirectNative" */ = {isa = XCLocalSwiftPackageReference; relativePath = ../../packages/AIMDirectNative; };
+		PK1000000000000000000001 /* XCLocalSwiftPackageReference "Packages/AIMCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../packages/AIMCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+        D14600000000000000000004 /* AIMDirectNative */ = {isa = XCSwiftPackageProductDependency; package = D14600000000000000000005; productName = AIMDirectNative; };
+		SP1000000000000000000001 /* AIMCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PK1000000000000000000001 /* XCLocalSwiftPackageReference "Packages/AIMCore" */;
+			productName = AIMCore;
+		};
+		SP1000000000000000000002 /* AIMCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PK1000000000000000000001 /* XCLocalSwiftPackageReference "Packages/AIMCore" */;
+			productName = AIMCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = P10000000000000000000001 /* Project object */;
+}

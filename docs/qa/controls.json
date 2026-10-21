@@ -1,0 +1,4156 @@
+{
+  "schema": 1,
+  "owner_gate": "docs/VALIDATION_AVANT_PUBLICATION_FR.md",
+  "gate_sha256": "c217f8b9b28a77c3fe54395e5875b336e6bdd75e28a7db907edb7a6db47ed41a",
+  "runbook_sha256": "098ca2515697299eeb17a162d31c8cf5dff5141874cbd4e744bb5dd2b8b08f61",
+  "followup_sha256": "10c9e1f0585413f4e36e4c94fdf953ec684e0d7ece13e6b2401c2122c5d4a0c9",
+  "publication_qualified": false,
+  "controls": [
+    {
+      "id": "D01",
+      "expected": "Installer iPhone et Mac avec les mêmes identifiants et droits signés ; vérifier les versions réellement installées.",
+      "owner_status": "VALIDÉ — 19 octobre, Mac À propos 0.1.0 (55), iPhone inventaire 2.0 (55), identités inchangées ; preuves de signature/droits 55 conservées ; campagne QA",
+      "followup": {
+        "id": "D01",
+        "owner_status": "VALIDÉ — 19 octobre, Mac À propos 0.1.0 (55), iPhone inventaire 2.0 (55), identités inchangées ; preuves de signature/droits 55 conservées ; campagne QA",
+        "evidence_acquired": "Mac 0.1.0 (55) observé et inventaire iPhone 2.0 (55), identités vérifiées le 19/10.",
+        "remaining_conditions": "Relever les versions et signatures du prochain candidat exact ; conserver le succès 55.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Préparation des candidats et conservation"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "acquis-a-conserver"
+        ],
+        "next_action": "Relever les versions et signatures du prochain candidat exact ; conserver le succès 55.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Préparation des candidats et conservation"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Relever les versions et signatures du prochain candidat exact ; conserver le succès 55."
+    },
+    {
+      "id": "D02",
+      "expected": "Copies ciblées vérifiées, puis comparaison avant première ouverture : données persistantes identiques, app officielle inchangée.",
+      "owner_status": "VALIDÉ — builds 55 : 146 fichiers Mac et 34 fichiers iPhone comparés avant ouverture le 19/10 ; retours arrière conservés",
+      "followup": {
+        "id": "D02",
+        "owner_status": "VALIDÉ — builds 55 : 146 fichiers Mac et 34 fichiers iPhone comparés avant ouverture le 19/10 ; retours arrière conservés",
+        "evidence_acquired": "Comparaison avant ouverture 55 : 146 fichiers Mac et 34 iPhone, rollbacks conservés.",
+        "remaining_conditions": "Avant tout remplacement : nouvelle sauvegarde ciblée cohérente, comparaison et rollback ; ne pas recycler une vieille copie.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Préparation des candidats et conservation"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "acquis-a-conserver"
+        ],
+        "next_action": "Avant tout remplacement : nouvelle sauvegarde ciblée cohérente, comparaison et rollback ; ne pas recycler une vieille copie.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Préparation des candidats et conservation"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Avant tout remplacement : nouvelle sauvegarde ciblée cohérente, comparaison et rollback ; ne pas recycler une vieille copie."
+    },
+    {
+      "id": "D03",
+      "expected": "Après réouverture sur les deux appareils : projets, conversations, documents, instructions, réglages, clés utilisables et appairages conservés.",
+      "owner_status": "PARTIEL — propriétaire : réouverture/conservation et parcours nominal 55 réussis le 19/10 ; revue exhaustive finale et clés locales iPhone restent à qualifier",
+      "followup": {
+        "id": "D03",
+        "owner_status": "PARTIEL — propriétaire : réouverture/conservation et parcours nominal 55 réussis le 19/10 ; revue exhaustive finale et clés locales iPhone restent à qualifier",
+        "evidence_acquired": "Réouverture déclarée réussie par le propriétaire ; témoin existant lisible sur les deux apps.",
+        "remaining_conditions": "Comparer projets, documents, brouillons, instructions, réglages et clés utilisables après mise à jour autorisée.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls D03"
+        ],
+        "procedure": [
+          "T01"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Comparer projets, documents, brouillons, instructions, réglages et clés utilisables après mise à jour autorisée.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T01"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/AccountChatSyncTests.swift",
+        "apps/macos/Tests/AIMMacPlatformTests/ProfileScopedCredentialStoreTests.swift",
+        "apps/macos/Tests/AIMMacTests/MacLocalProfileStoreTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "AccountChatSyncTests",
+            "MacLocalProfileStoreTests",
+            "ProfileScopedCredentialStoreTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Comparer projets, documents, brouillons, instructions, réglages et clés utilisables après mise à jour autorisée."
+    },
+    {
+      "id": "D04",
+      "expected": "Ouvrir/fermer le scanner dix fois sur l'iPhone physique, dont fermeture immédiate et passage en arrière-plan : aucune pause prolongée, relance ni caméra restant active.",
+      "owner_status": "VALIDÉ — 19 octobre, iPhone 55 : dix cycles + accueil/retour, paire inchangée ; indicateur caméra disparu confirmé propriétaire ; ancien gel 52 conservé dans l’historique",
+      "followup": {
+        "id": "D04",
+        "owner_status": "VALIDÉ — 19 octobre, iPhone 55 : dix cycles + accueil/retour, paire inchangée ; indicateur caméra disparu confirmé propriétaire ; ancien gel 52 conservé dans l’historique",
+        "evidence_acquired": "Dix cycles scanner physiques + accueil/retour, paire inchangée ; arrêt caméra confirmé propriétaire.",
+        "remaining_conditions": "Ne pas répéter le scanner sans modification pertinente ; conserver les preuves 55 et la limite intermittence.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target simulator --ios-tests ui"
+        ],
+        "procedure": [
+          "T04"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "iPhone physique, caméra autorisée, dix ouvertures/fermetures"
+        ],
+        "branches": [
+          "acquis-a-conserver"
+        ],
+        "next_action": "Ne pas répéter le scanner sans modification pertinente ; conserver les preuves 55 et la limite intermittence.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T04"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "iPhone physique, caméra autorisée, dix ouvertures/fermetures"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMUITests/AIMUITests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "ios",
+          "suites": [
+            "AIMUITests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": "AIMUITests/AIMPhysicalScannerUITests/testRealScannerTenOpenCloseCyclesAndForegroundReturn",
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Ne pas répéter le scanner sans modification pertinente ; conserver les preuves 55 et la limite intermittence."
+    },
+    {
+      "id": "D05",
+      "expected": "Nom/carte du Mac cliquable ; reconnexion après relance ; déconnexion volontaire respectée ; plusieurs Macs sans choix arbitraire ; « Cet iPhone » reste un choix explicite d'exécution.",
+      "owner_status": "PARTIEL — 55 : reconnexion/opt-out et quatre modèles acquis ; persistance de cible décidée et corrigée en sources/unitaires ; nouveau candidat physique et multi-Mac/parité complète ouverts",
+      "followup": {
+        "id": "D05",
+        "owner_status": "PARTIEL — 55 : reconnexion/opt-out et quatre modèles acquis ; persistance de cible décidée et corrigée en sources/unitaires ; nouveau candidat physique et multi-Mac/parité complète ouverts",
+        "evidence_acquired": "55 : reconnexion et déconnexion volontaire persistante réussies ; quatre noms Mac présents. Politique OBS02 décidée : cible mémorisée par profil. 20/10 : propriétaire confirme reconnexion en quelques secondes sans QR et conversation consultable ; versions/route non revérifiées, cache possible. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Rejouer la persistance de cible corrigée sur futur candidat, multi-Mac sans substitution et parité des routes/bibliothèque.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls D05",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T02",
+          "T03"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Rejouer la persistance de cible corrigée sur futur candidat, multi-Mac sans substitution et parité des routes/bibliothèque.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/RETOUR_PROPRIETAIRE_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T02",
+        "T03"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/ProjectPresentationTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "DirectConnectionLifecycleTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Rejouer la persistance de cible corrigée sur futur candidat, multi-Mac sans substitution et parité des routes/bibliothèque."
+    },
+    {
+      "id": "D06",
+      "expected": "Revue iPhone : clavier ouvert/fermé, streaming rapide, défilement manuel/automatique, rotation et petites/grandes polices sans chevauchement.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "D06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Revue clavier/rotation/petites et grandes polices/streaming rapide et défilement sur candidat physique.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target simulator --ios-tests ui"
+        ],
+        "procedure": [
+          "T06",
+          "T17"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Revue clavier/rotation/petites et grandes polices/streaming rapide et défilement sur candidat physique.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T06",
+        "T17"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMUITests/AIMUITests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "ios",
+          "suites": [
+            "AIMUITests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Revue clavier/rotation/petites et grandes polices/streaming rapide et défilement sur candidat physique."
+    },
+    {
+      "id": "D07",
+      "expected": "Revue Mac : fenêtre petite/grande, clair/sombre, navigation clavier, VoiceOver, QR et éditeur des droits défilants sans action inaccessible.",
+      "owner_status": "À TESTER ; About/Remote et ouverture des droits observés en 52",
+      "followup": {
+        "id": "D07",
+        "owner_status": "À TESTER ; About/Remote et ouverture des droits observés en 52",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Petite/grande fenêtre, clair/sombre, clavier/VoiceOver, QR et éditeur défilant ; témoin Mac séparé.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls D07",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T06",
+          "T07"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Petite/grande fenêtre, clair/sombre, clavier/VoiceOver, QR et éditeur défilant ; témoin Mac séparé.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T06",
+        "T07"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/ProjectPresentationTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/ModelCatalogPresentationTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelCatalogPresentationTests",
+            "RemoteModelSelectionTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "ProjectPresentationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Petite/grande fenêtre, clair/sombre, clavier/VoiceOver, QR et éditeur défilant ; témoin Mac séparé."
+    },
+    {
+      "id": "D08",
+      "expected": "Sélection de modèles et onglets : un appui normal fonctionne ; aucun appui prolongé requis. Navigation projet → conversation → retour cohérente.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "D08",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Premier usage vide, ajout/retrait/dernière sélection par route, navigation projet et appui normal.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls D08",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T06",
+          "T08",
+          "T09",
+          "T10"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Premier usage vide, ajout/retrait/dernière sélection par route, navigation projet et appui normal.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T06",
+        "T08",
+        "T09",
+        "T10"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/ProjectPresentationTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/ModelCatalogPresentationTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelCatalogPresentationTests",
+            "RemoteModelSelectionTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "ProjectPresentationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Premier usage vide, ajout/retrait/dernière sélection par route, navigation projet et appui normal."
+    },
+    {
+      "id": "D09",
+      "expected": "Copie explicite de profil, import/export et changement de profil : aperçu, confirmation, erreurs récupérables, aucune fuite de clés ou de données entre profils.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "D09",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Copies et imports explicites entre profils synthétiques, aperçu/confirmation/conflit/reprise ; clés jamais mélangées.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls D09"
+        ],
+        "procedure": [
+          "T08"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant"
+        ],
+        "next_action": "Copies et imports explicites entre profils synthétiques, aperçu/confirmation/conflit/reprise ; clés jamais mélangées.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T08"
+      ],
+      "developer_preparations": [
+        "Profils, synchronisation et imports isolés"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/AccountChatSyncTests.swift",
+        "apps/macos/Tests/AIMMacPlatformTests/ProfileScopedCredentialStoreTests.swift",
+        "apps/macos/Tests/AIMMacTests/MacLocalProfileStoreTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "AccountChatSyncTests",
+            "MacLocalProfileStoreTests",
+            "ProfileScopedCredentialStoreTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls D09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Copies et imports explicites entre profils synthétiques, aperçu/confirmation/conflit/reprise ; clés jamais mélangées."
+    },
+    {
+      "id": "L01",
+      "expected": "La paire existante se connecte sans nouveau QR et l'état de connexion devient direct.",
+      "owner_status": "VALIDÉ — build 52, capture propriétaire du 18/10",
+      "followup": {
+        "id": "L01",
+        "owner_status": "VALIDÉ — build 52, capture propriétaire du 18/10",
+        "evidence_acquired": "Connexion directe physique déjà validée en 52, encore observée en 55.",
+        "remaining_conditions": "Conserver la preuve acquise ; réévaluer seulement les changements pertinents du prochain candidat.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L01"
+        ],
+        "procedure": [
+          "T02"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "acquis-a-conserver"
+        ],
+        "next_action": "Conserver les preuves historiques, sans refaire le QR.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T02"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Conserver les preuves historiques, sans refaire le QR."
+    },
+    {
+      "id": "L02",
+      "expected": "Lire depuis l'iPhone une conversation/activité connue du Mac ; contenu exact, bon profil, aucun appel modèle. Une connexion verte seule ne suffit pas.",
+      "owner_status": "PARTIEL — 55 : témoin existant lisible et quatre modèles Anthropic présents ; pilote QA synthétique catalogue/lecture validé ; parité exhaustive physique des routes/capacités/bibliothèque reste ouverte",
+      "followup": {
+        "id": "L02",
+        "owner_status": "PARTIEL — 55 : témoin existant lisible et quatre modèles Anthropic présents ; pilote QA synthétique catalogue/lecture validé ; parité exhaustive physique des routes/capacités/bibliothèque reste ouverte",
+        "evidence_acquired": "Témoin existant visible des deux côtés ; quatre modèles Anthropic présents en 55. Pas de parité exhaustive. 20/10 : propriétaire confirme reconnexion en quelques secondes sans QR et conversation consultable ; versions/route non revérifiées, cache possible.",
+        "remaining_conditions": "Comparer catalogue complet, routes, capacités, bibliothèque et contenu/profil ; aucun nouvel appel modèle nécessaire.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L02"
+        ],
+        "procedure": [
+          "T02",
+          "T09",
+          "T11"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Comparer catalogue complet, routes, capacités, bibliothèque et contenu/profil ; aucun nouvel appel modèle nécessaire.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/RETOUR_PROPRIETAIRE_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T02",
+        "T09",
+        "T11"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Comparer catalogue complet, routes, capacités, bibliothèque et contenu/profil ; aucun nouvel appel modèle nécessaire."
+    },
+    {
+      "id": "L03",
+      "expected": "Désactiver « Use terminal » dans Permissions sur Mac, enregistrer : reconnexion sans QR et nouveaux droits visibles sur iPhone. Restaurer ensuite par action explicite et vérifier.",
+      "owner_status": "VALIDÉ PAR LE PROPRIÉTAIRE le 19 octobre, Mac 54/iPhone 53 : droits mis à jour sans QR ; ne valide pas L04/L05",
+      "followup": {
+        "id": "L03",
+        "owner_status": "VALIDÉ PAR LE PROPRIÉTAIRE le 19 octobre, Mac 54/iPhone 53 : droits mis à jour sans QR ; ne valide pas L04/L05",
+        "evidence_acquired": "Droits modifiés et restaurés sans QR confirmés propriétaire le 19/10 ; consultation sans mutation en 55. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps.",
+        "remaining_conditions": "Conserver la preuve acquise ; réévaluer seulement les changements pertinents du prochain candidat.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L03"
+        ],
+        "procedure": [
+          "T05"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "acquis-a-conserver"
+        ],
+        "next_action": "Conserver les preuves historiques, sans refaire le QR.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T05"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMAgentRuntimeTests/DirectRemoteRuntimeAuthorizationTests.swift",
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests",
+            "DirectRemoteRuntimeAuthorizationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Conserver les preuves historiques, sans refaire le QR."
+    },
+    {
+      "id": "L04",
+      "expected": "Essayer une opération retirée : refus côté Mac, aucun effet ; lire reste possible. Vérifier également le refus d'une ancienne session/commande mise en cache.",
+      "owner_status": "À TESTER sur appareils ; régressions natives synthétiques disponibles",
+      "followup": {
+        "id": "L04",
+        "owner_status": "À TESTER sur appareils ; régressions natives synthétiques disponibles",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Commande retirée et ancienne commande en cache refusées, aucun effet, lecture encore possible.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L04"
+        ],
+        "procedure": [
+          "T05",
+          "T18"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires",
+          "QA08 : caractériser le timeout natif avant qualification native fiable"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique",
+          "2-correction-identifiee"
+        ],
+        "next_action": "Commande retirée et ancienne commande en cache refusées, aucun effet, lecture encore possible.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/PREVERSION_MAC_CRITIQUE_2026-10-19_FR.md",
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T05",
+        "T18"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMAgentRuntimeTests/DirectRemoteRuntimeAuthorizationTests.swift",
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests",
+            "DirectRemoteRuntimeAuthorizationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Commande retirée et ancienne commande en cache refusées, aucun effet, lecture encore possible."
+    },
+    {
+      "id": "L05",
+      "expected": "Couper l'accès iPhone global sur Mac puis le réactiver : refus puis reprise cohérents, données préservées.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Accès global coupé puis réactivé sur paire QA : refus et reprise, données conservées.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L05"
+        ],
+        "procedure": [
+          "T05"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Accès global coupé puis réactivé sur paire QA : refus et reprise, données conservées.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T05"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Accès global coupé puis réactivé sur paire QA : refus et reprise, données conservées."
+    },
+    {
+      "id": "L06",
+      "expected": "Révoquer la paire de qualification : session coupée, reconnexion et anciens messages refusés. Une nouvelle association exige un nouvel accord Mac.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Révoquer uniquement une paire QA distincte ; anciens messages et reconnexion refusés ; nouvel accord requis.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L06"
+        ],
+        "procedure": [
+          "T23"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Révoquer uniquement une paire QA distincte ; anciens messages et reconnexion refusés ; nouvel accord requis.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T23"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Révoquer uniquement une paire QA distincte ; anciens messages et reconnexion refusés ; nouvel accord requis."
+    },
+    {
+      "id": "L07",
+      "expected": "QR expiré, déjà consommé, invalide ou destiné à un autre appareil : refus propre ; annuler l'association ne laisse aucun accès actif.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L07",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Invitations QA expirée/consommée/invalide/autre appareil refusées ; annulation sans droit actif.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L07"
+        ],
+        "procedure": [
+          "T04",
+          "T23"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Invitations QA expirée/consommée/invalide/autre appareil refusées ; annulation sans droit actif.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T04",
+        "T23"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Invitations QA expirée/consommée/invalide/autre appareil refusées ; annulation sans droit actif."
+    },
+    {
+      "id": "L08",
+      "expected": "Appareil non appairé, mauvais profil et identité modifiée : accès refusé, sans faux compte cloud.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L08",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Mauvais profil/identité et appareil non appairé refusés côté exécutant.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L08"
+        ],
+        "procedure": [
+          "T23"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Mauvais profil/identité et appareil non appairé refusés côté exécutant.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T23"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Mauvais profil/identité et appareil non appairé refusés côté exécutant."
+    },
+    {
+      "id": "L09",
+      "expected": "Même réseau local sans accès Internet : découverte, authentification et lecture locale fonctionnent sans service AIM public ni Supabase.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L09",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Lecture et modèle local sur réseau de test réellement sans Internet ; réseau de travail intact.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L09"
+        ],
+        "procedure": [
+          "T24"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Lecture et modèle local sur réseau de test réellement sans Internet ; réseau de travail intact.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T24"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Lecture et modèle local sur réseau de test réellement sans Internet ; réseau de travail intact."
+    },
+    {
+      "id": "L10",
+      "expected": "Réseau local refusé dans iOS/macOS ou Wi-Fi invité isolant les clients : erreur compréhensible, pas de blocage UI ; récupération après autorisation/réseau corrigé.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "L10",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Refus/restauration Réseau local sur app QA et réseau invité isolant : erreur et récupération.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls L10"
+        ],
+        "procedure": [
+          "T24"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Refus/restauration Réseau local sur app QA et réseau invité isolant : erreur et récupération.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T24"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls L10",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Refus/restauration Réseau local sur app QA et réseau invité isolant : erreur et récupération."
+    },
+    {
+      "id": "I01",
+      "expected": "Modèle local sur Mac, lancé directement sur Mac : réponse correcte sans accès fournisseur, modèle/serveur identifiés.",
+      "owner_status": "À PRÉPARER selon modèle installé",
+      "followup": {
+        "id": "I01",
+        "owner_status": "À PRÉPARER selon modèle installé",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Candidat avec moteur et modèle local réellement disponibles ; référence locale sans cloud.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I01"
+        ],
+        "procedure": [
+          "T11"
+        ],
+        "dependencies": [
+          "Moteur et modèle locaux réellement disponibles ; build 55 annonce moteurs absents"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Candidat avec moteur et modèle local réellement disponibles ; référence locale sans cloud.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T11"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ModelRoutingTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelRoutingTests",
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Candidat avec moteur et modèle local réellement disponibles ; référence locale sans cloud."
+    },
+    {
+      "id": "I02",
+      "expected": "Même modèle local lancé depuis iPhone en ciblant explicitement le Mac : requête reçue/exécutée sur Mac, réponse et streaming sur iPhone ; aucun appel local iPhone substitué.",
+      "owner_status": "À TESTER après I01 et L02",
+      "followup": {
+        "id": "I02",
+        "owner_status": "À TESTER après I01 et L02",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Après I01 et parité L02, même modèle depuis iPhone ciblant Mac ; route et streaming prouvés.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I02"
+        ],
+        "procedure": [
+          "T11"
+        ],
+        "dependencies": [
+          "Moteur et modèle locaux réellement disponibles ; build 55 annonce moteurs absents",
+          "I01 et L02"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Après I01 et parité L02, même modèle depuis iPhone ciblant Mac ; route et streaming prouvés.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T11"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ModelRoutingTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelRoutingTests",
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Après I01 et parité L02, même modèle depuis iPhone ciblant Mac ; route et streaming prouvés."
+    },
+    {
+      "id": "I03",
+      "expected": "API autorisée directement sur Mac : réponse courte correcte, usage/coût et reçu fournisseur vérifiables.",
+      "owner_status": "PARTIEL — propriétaire : appel Anthropic Mac 55 réussi avec limite 10 $ Estimated active ; reçu et coût réel à rapprocher",
+      "followup": {
+        "id": "I03",
+        "owner_status": "PARTIEL — propriétaire : appel Anthropic Mac 55 réussi avec limite 10 $ Estimated active ; reçu et coût réel à rapprocher",
+        "evidence_acquired": "Appel Anthropic Mac 55 réussi déclaré, limite 10 USD Estimated active ; reçu réel non rapproché.",
+        "remaining_conditions": "Rapprocher reçu/usage réel Anthropic existant ; ne pas répéter le nominal sans raison.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I03"
+        ],
+        "procedure": [
+          "T12"
+        ],
+        "dependencies": [
+          "Total Anthropic+OpenRouter rapproché au plafond cumulé 10 USD avant tout appel payant"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Rapprocher reçu/usage réel Anthropic existant ; ne pas répéter le nominal sans raison.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T12"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ModelRoutingTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelRoutingTests",
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Rapprocher reçu/usage réel Anthropic existant ; ne pas répéter le nominal sans raison."
+    },
+    {
+      "id": "I04",
+      "expected": "API autorisée lancée depuis iPhone avec cible Mac : même route Mac, clé utilisée sur Mac, réponse retournée ; pas de deuxième génération facturée.",
+      "owner_status": "PARTIEL — propriétaire : appel depuis iPhone 55 ciblant Mac 55 réussi avec limite active ; route, activité fournisseur et absence de doublon à rapprocher",
+      "followup": {
+        "id": "I04",
+        "owner_status": "PARTIEL — propriétaire : appel depuis iPhone 55 ciblant Mac 55 réussi avec limite active ; route, activité fournisseur et absence de doublon à rapprocher",
+        "evidence_acquired": "Appel iPhone 55 ciblant Mac 55 réussi déclaré ; unicité fournisseur non rapprochée.",
+        "remaining_conditions": "Rapprocher route, IDs fournisseur existants et absence de génération iPhone doublée.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I04"
+        ],
+        "procedure": [
+          "T12"
+        ],
+        "dependencies": [
+          "Total Anthropic+OpenRouter rapproché au plafond cumulé 10 USD avant tout appel payant"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Rapprocher route, IDs fournisseur existants et absence de génération iPhone doublée.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T12"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ModelRoutingTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelRoutingTests",
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Rapprocher route, IDs fournisseur existants et absence de génération iPhone doublée."
+    },
+    {
+      "id": "I05",
+      "expected": "Choisir « Cet iPhone » : exécution locale iPhone explicite, association Mac conservée et retour vers Mac possible.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "I05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Cible Cet iPhone explicite, inférence locale iPhone réelle puis retour Mac ; solde si API.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I05"
+        ],
+        "procedure": [
+          "T13"
+        ],
+        "dependencies": [
+          "Total Anthropic+OpenRouter rapproché au plafond cumulé 10 USD avant tout appel payant"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Cible Cet iPhone explicite, inférence locale iPhone réelle puis retour Mac ; solde si API.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T13"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ModelRoutingTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/RemoteModelSelectionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ModelRoutingTests",
+            "RemoteModelSelectionTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Cible Cet iPhone explicite, inférence locale iPhone réelle puis retour Mac ; solde si API."
+    },
+    {
+      "id": "I06",
+      "expected": "Annuler une réponse depuis iPhone : production arrêtée sur Mac, état cohérent, usage partiel conservé. Double appui Envoyer et réponse réseau perdue : une seule commande/charge logique.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "I06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Arrêt depuis iPhone, double envoi et réponse perdue : même commande, effet et coût logique uniques.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I06"
+        ],
+        "procedure": [
+          "T14"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Arrêt depuis iPhone, double envoi et réponse perdue : même commande, effet et coût logique uniques.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T14"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Arrêt depuis iPhone, double envoi et réponse perdue : même commande, effet et coût logique uniques."
+    },
+    {
+      "id": "I07",
+      "expected": "Erreur fournisseur, clé absente/invalide, modèle indisponible, limite de contexte : erreur utile, brouillon conservé, pas de basculement facturé automatique.",
+      "owner_status": "À TESTER avec compte/configuration de qualification",
+      "followup": {
+        "id": "I07",
+        "owner_status": "À TESTER avec compte/configuration de qualification",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Clé absente/invalide, modèle indisponible/contexte et fournisseur en erreur avec URLProtocol, puis intégration QA sans fallback facturé.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I07",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T14"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant"
+        ],
+        "next_action": "Clé absente/invalide, modèle indisponible/contexte et fournisseur en erreur avec URLProtocol, puis intégration QA sans fallback facturé.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T14"
+      ],
+      "developer_preparations": [
+        "Fixtures de sécurité et de coûts"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/ProjectBudgetTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/ExecutionScopedSpendTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/DeviceBudgetAdmissionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DeviceBudgetAdmissionTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "ExecutionScopedSpendTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "ProjectBudgetTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Clé absente/invalide, modèle indisponible/contexte et fournisseur en erreur avec URLProtocol, puis intégration QA sans fallback facturé."
+    },
+    {
+      "id": "I08",
+      "expected": "Budget actif (10 $ pour la reprise autorisée du 19 octobre ; 5 $ historique) : petit appel admis ; budget restant insuffisant et protection stricte refusent correctement ; historique inconnu expliqué sans fausse gratuité. Compter les frais connus une seule fois sur Mac/iPhone.",
+      "owner_status": "PARTIEL — propriétaire : petits appels 55 admis avec limite 10 $ Estimated active ; refus insuffisant/strict, anciens coûts inconnus et comptage restent à tester. Échec Mac 54 conservé en historique ; iPhone 5 $ historique réussi en 50",
+      "followup": {
+        "id": "I08",
+        "owner_status": "PARTIEL — propriétaire : petits appels 55 admis avec limite 10 $ Estimated active ; refus insuffisant/strict, anciens coûts inconnus et comptage restent à tester. Échec Mac 54 conservé en historique ; iPhone 5 $ historique réussi en 50",
+        "evidence_acquired": "Petits appels 55 avec budget actif déclarés ; mesures synthétiques Automatic : 8192/3964 tokens, 0.012679 USD réservés <= 0.0126795.",
+        "remaining_conditions": "Conserver calculs/réservations synthétiques ; rapprocher frais réels, refus insuffisant/strict et inconnus sur candidat final.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I08",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T14"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Conserver calculs/réservations synthétiques ; rapprocher frais réels, refus insuffisant/strict et inconnus sur candidat final.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T14"
+      ],
+      "developer_preparations": [
+        "Fixtures de sécurité et de coûts"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/NativeMemoryCaptureTests.swift",
+        "apps/ios/AIMTests/ProjectBudgetTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/ExecutionScopedSpendTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/GlobalSpendLedgerTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/UncappedProviderPolicyTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/DeviceBudgetAdmissionTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DeviceBudgetAdmissionTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "ExecutionScopedSpendTests",
+            "GlobalSpendLedgerTests",
+            "UncappedProviderPolicyTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "NativeMemoryCaptureTests",
+            "ProjectBudgetTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Conserver calculs/réservations synthétiques ; rapprocher frais réels, refus insuffisant/strict et inconnus sur candidat final."
+    },
+    {
+      "id": "I09",
+      "expected": "Sources projet et instructions : code témoin trouvé, nom du fichier lisible, sources exclues non utilisées ; profils/projets isolés ; import/renommage/brouillons conservés.",
+      "owner_status": "À TESTER sur les deux appareils ; preuves iPhone anciennes à requalifier",
+      "followup": {
+        "id": "I09",
+        "owner_status": "À TESTER sur les deux appareils ; preuves iPhone anciennes à requalifier",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Sur chaque app : projet/source/instructions/exclusion et citations, renommage/import/brouillons conservés ; fixture projet créé.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I09"
+        ],
+        "procedure": [
+          "T15"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Sur chaque app : projet/source/instructions/exclusion et citations, renommage/import/brouillons conservés ; fixture projet créé.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA12 : intégration SourceKit réelle sous barrière Contacts encore en échec ; crash pipe fermé corrigé",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T15"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/ProjectSourceRetrievalTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/ProjectSourceToolTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/SourceCitationTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "ProjectSourceRetrievalTests",
+            "ProjectSourceToolTests",
+            "SourceCitationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Sur chaque app : projet/source/instructions/exclusion et citations, renommage/import/brouillons conservés ; fixture projet créé."
+    },
+    {
+      "id": "I10",
+      "expected": "Recherche OpenRouter : vrais liens vérifiables, distinction résultats/citations/visites, activité honnête, une durée globale, réflexion repliée, arrêt et budget cohérents.",
+      "owner_status": "À TESTER sur les deux appareils",
+      "followup": {
+        "id": "I10",
+        "owner_status": "À TESTER sur les deux appareils",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Recherche réelle autorisée, liens vérifiés, visites distinguées des citations, arrêt et frais ; instrumentation synthétique ne suffit pas.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I10",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T16"
+        ],
+        "dependencies": [
+          "Total Anthropic+OpenRouter rapproché au plafond cumulé 10 USD avant tout appel payant"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Recherche réelle autorisée, liens vérifiés, visites distinguées des citations, arrêt et frais ; instrumentation synthétique ne suffit pas.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T16"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/HybridResearchStoreTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/HybridResearchConversationTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "HybridResearchConversationTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "HybridResearchStoreTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I10",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Recherche réelle autorisée, liens vérifiés, visites distinguées des citations, arrêt et frais ; instrumentation synthétique ne suffit pas."
+    },
+    {
+      "id": "I11",
+      "expected": "Recherche AIM Exa puis Brave : clé personnelle, limites/recherche/lecture/annulation, outils hébergés désactivés, frais sans doublon ; comparaison à questions identiques sans promesse prématurée de qualité/prix.",
+      "owner_status": "À PRÉPARER — coûts et clés distincts à autoriser",
+      "followup": {
+        "id": "I11",
+        "owner_status": "À PRÉPARER — coûts et clés distincts à autoriser",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Autorisation et clés personnelles Exa/Brave distinctes, plafonds puis comparaison sur questions identiques.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I11",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "Comparaison de recherche avec budgets autorisés"
+        ],
+        "dependencies": [
+          "Accord fournisseurs/budget Exa/Brave distinct"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Route/modèle réellement disponible",
+          "Autorisation fournisseur/budget si appel payant"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Autorisation et clés personnelles Exa/Brave distinctes, plafonds puis comparaison sur questions identiques.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Comparaison de recherche avec budgets autorisés"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Route/modèle réellement disponible",
+        "Autorisation fournisseur/budget si appel payant"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/HybridResearchStoreTests.swift",
+        "apps/macos/Tests/AIMApplicationTests/HybridResearchConversationTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "HybridResearchConversationTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "HybridResearchStoreTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I11",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Autorisation et clés personnelles Exa/Brave distinctes, plafonds puis comparaison sur questions identiques."
+    },
+    {
+      "id": "I12",
+      "expected": "Logos : CDN déclaré, SVG pris en charge, image invalide/refus/délai, confidentialité et cache ; globe de remplacement, aucun annuaire externe.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "I12",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément TURN/logos : IND-002 corrigé ; 25 tests ciblés rejoués, Core 437 exécutés/21 Swift Testing, Mac 18 et UI simulateur 2 réussis ; rendu physique non observé.",
+        "remaining_conditions": "Cache/DNS/redirect/SVG/tailles et refus synthétiques puis rendu globe/logo sur candidat physique.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls I12"
+        ],
+        "procedure": [
+          "T16"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Cache/DNS/redirect/SVG/tailles et refus synthétiques puis rendu globe/logo sur candidat physique.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/TURN_LOGOS_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T16"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/SourceFaviconStoreTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/StaticSVGIconRendererTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "SourceFaviconStoreTests",
+            "StaticSVGIconRendererTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls I12",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Cache/DNS/redirect/SVG/tailles et refus synthétiques puis rendu globe/logo sur candidat physique."
+    },
+    {
+      "id": "R01",
+      "expected": "Fermer l'app iPhone pendant une tâche Mac : le Mac continue ; réouverture retrouve la même tâche et son résultat, sans réexécution.",
+      "owner_status": "À TESTER avec tâche de qualification",
+      "followup": {
+        "id": "R01",
+        "owner_status": "À TESTER avec tâche de qualification",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Tâche QA déterministe, quitter seulement client QA, retrouver même ID/résultat sans réexécution.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R01"
+        ],
+        "procedure": [
+          "T19"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Tâche QA déterministe, quitter seulement client QA, retrouver même ID/résultat sans réexécution.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T19"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Tâche QA déterministe, quitter seulement client QA, retrouver même ID/résultat sans réexécution."
+    },
+    {
+      "id": "R02",
+      "expected": "Wi-Fi iPhone coupé/rétabli et perte brève du réseau Mac : état reconnexion puis récupération, sans doublon ni approbation perdue.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "R02",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Coupures réseau de qualification, récupération sans doublon/approbation perdue ; pas de réseau de travail modifié.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R02"
+        ],
+        "procedure": [
+          "T20"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Coupures réseau de qualification, récupération sans doublon/approbation perdue ; pas de réseau de travail modifié.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T20"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Coupures réseau de qualification, récupération sans doublon/approbation perdue ; pas de réseau de travail modifié."
+    },
+    {
+      "id": "R03",
+      "expected": "Verrouiller l'iPhone puis revenir : session restaurée selon l'intention ; une déconnexion volontaire reste déconnectée.",
+      "owner_status": "PARTIEL — 55 : relance/reconnexion et déconnexion volontaire persistante acquises ; verrouillage/retour physique reste distinct",
+      "followup": {
+        "id": "R03",
+        "owner_status": "PARTIEL — 55 : relance/reconnexion et déconnexion volontaire persistante acquises ; verrouillage/retour physique reste distinct",
+        "evidence_acquired": "Reconnexion après relance et déconnexion volontaire acquises en 55 ; verrouillage distinct. 20/10 : propriétaire confirme reconnexion en quelques secondes sans QR et conversation consultable ; versions/route non revérifiées, cache possible. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Verrouillage/retour physique distinct de la relance déjà acquise ; opt-out respecté.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R03",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "T03",
+          "T19"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires",
+          "QA08 : caractériser le timeout natif avant qualification native fiable"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique",
+          "2-correction-identifiee"
+        ],
+        "next_action": "Verrouillage/retour physique distinct de la relance déjà acquise ; opt-out respecté.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/PREVERSION_MAC_CRITIQUE_2026-10-19_FR.md",
+          "docs/qa/RETOUR_PROPRIETAIRE_2026-10-20_FR.md",
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T03",
+        "T19"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/ios/AIMTests/ProjectPresentationTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "ios",
+          "suites": [
+            "DirectConnectionLifecycleTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Verrouillage/retour physique distinct de la relance déjà acquise ; opt-out respecté."
+    },
+    {
+      "id": "R04",
+      "expected": "Mac verrouillé, en veille, puis réveillé : disponibilité affichée honnêtement ; aucune action UI pendant un verrouillage qui l'interdit. Reprise sûre après réveil.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "R04",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Verrouillage/veille/réveil Mac autorisés, disponibilité honnête et refus des actions UI interdites.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R04"
+        ],
+        "procedure": [
+          "T21"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Verrouillage/veille/réveil Mac autorisés, disponibilité honnête et refus des actions UI interdites.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T21"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/ToolVisionNavigationTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/RemoteLockRulesTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "RemoteLockRulesTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "ToolVisionNavigationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Verrouillage/veille/réveil Mac autorisés, disponibilité honnête et refus des actions UI interdites."
+    },
+    {
+      "id": "R05",
+      "expected": "Quitter/redémarrer AIM Mac et redémarrer les appareils : journaux et tâches durables récupérés ; commande incertaine non exécutée deux fois.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "R05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Redémarrage app QA puis appareils à moment convenu ; journal durable et commande incertaine sans second effet.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R05"
+        ],
+        "procedure": [
+          "T21"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Redémarrage app QA puis appareils à moment convenu ; journal durable et commande incertaine sans second effet.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T21"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Redémarrage app QA puis appareils à moment convenu ; journal durable et commande incertaine sans second effet."
+    },
+    {
+      "id": "R06",
+      "expected": "Révoquer/changer les droits pendant une coupure ou une action en attente : ancien droit invalidé avant reprise, résultat tardif sans effet non autorisé.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "R06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Changer/révoquer les droits QA pendant coupure/action en attente ; résultat tardif refusé.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R06"
+        ],
+        "procedure": [
+          "T23"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires",
+          "QA08 : caractériser le timeout natif avant qualification native fiable"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique",
+          "2-correction-identifiee"
+        ],
+        "next_action": "Changer/révoquer les droits QA pendant coupure/action en attente ; résultat tardif refusé.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/PREVERSION_MAC_CRITIQUE_2026-10-19_FR.md",
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T23"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Changer/révoquer les droits QA pendant coupure/action en attente ; résultat tardif refusé."
+    },
+    {
+      "id": "R07",
+      "expected": "Pièce jointe autorisée, taille limite dépassée et transfert interrompu : intégrité, limites, nettoyage et reprise sans fuite entre paires.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "R07",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Petit transfert, dépassement taille, interruption/reprise/nettoyage, séparation paire/session et intégrité.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls R07"
+        ],
+        "procedure": [
+          "T22"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Petit transfert, dépassement taille, interruption/reprise/nettoyage, séparation paire/session et intégrité.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T22"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/RemoteTransferCryptoTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "RemoteTransferCryptoTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls R07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Petit transfert, dépassement taille, interruption/reprise/nettoyage, séparation paire/session et intégrité."
+    },
+    {
+      "id": "N01",
+      "expected": "Service autonome de coordination WSS et coturn installables, TLS valide, secrets hors dépôt, identifiants TURN temporaires et quotas actifs.",
+      "owner_status": "À PRÉPARER — hébergement à chiffrer/autoriser",
+      "followup": {
+        "id": "N01",
+        "owner_status": "À PRÉPARER — hébergement à chiffrer/autoriser",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément TURN/logos : IND-001 corrigé ; 100 tests serveur et 69 cas IPv4 indépendants réussis, sans déploiement.",
+        "remaining_conditions": "Devis concret approuvé, service WSS/TLS et TURN de qualification, secrets privés et quotas vérifiés.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "Préparation du service Internet et du devis"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Devis concret approuvé, service WSS/TLS et TURN de qualification, secrets privés et quotas vérifiés.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/TURN_LOGOS_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Préparation du service Internet et du devis"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Devis concret approuvé, service WSS/TLS et TURN de qualification, secrets privés et quotas vérifiés."
+    },
+    {
+      "id": "N02",
+      "expected": "iPhone en 4G/5G, Mac en Wi-Fi : appareil appairé retrouvé, lecture puis vraie demande IA et réponse. Aucun réseau local partagé.",
+      "owner_status": "À TESTER après N01 et lot 3",
+      "followup": {
+        "id": "N02",
+        "owner_status": "À TESTER après N01 et lot 3",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "N01 + modèle réel + iPhone mobile distinct du réseau Mac ; lecture puis inférence.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T25"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "N01 + modèle réel + iPhone mobile distinct du réseau Mac ; lecture puis inférence.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T25"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "N01 + modèle réel + iPhone mobile distinct du réseau Mac ; lecture puis inférence."
+    },
+    {
+      "id": "N03",
+      "expected": "Route réellement directe Internet démontrée par la paire ICE sélectionnée/diagnostic transport ; libellé cohérent.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "N03",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Relever paire ICE réellement sélectionnée sur réseaux distincts ; pas seulement libellé.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T25"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Relever paire ICE réellement sélectionnée sur réseaux distincts ; pas seulement libellé.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T25"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Relever paire ICE réellement sélectionnée sur réseaux distincts ; pas seulement libellé."
+    },
+    {
+      "id": "N04",
+      "expected": "Forcer TURN : allocation réelle, transport indiqué relayé, commande/réponse chiffrées de bout en bout ; serveur/relais sans clés de commandes.",
+      "owner_status": "À TESTER — un test loopback ne suffit pas",
+      "followup": {
+        "id": "N04",
+        "owner_status": "À TESTER — un test loopback ne suffit pas",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Allocation TURN réelle forcée sur réseaux distincts, chiffrement et reçu transport.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T26"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Allocation TURN réelle forcée sur réseaux distincts, chiffrement et reçu transport.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T26"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Allocation TURN réelle forcée sur réseaux distincts, chiffrement et reçu transport."
+    },
+    {
+      "id": "N05",
+      "expected": "Passer Wi-Fi → mobile → Wi-Fi pendant une tâche : reprise du même identifiant, résultat complet et un seul effet.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "N05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Bascule Wi-Fi/mobile/Wi-Fi pendant tâche QA : même ID et un seul effet.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T26"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Bascule Wi-Fi/mobile/Wi-Fi pendant tâche QA : même ID et un seul effet.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T26"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Bascule Wi-Fi/mobile/Wi-Fi pendant tâche QA : même ID et un seul effet."
+    },
+    {
+      "id": "N06",
+      "expected": "Bloquer UDP puis tester un réseau restrictif : direct si possible, relais compatible sinon, erreur utile si aucun chemin ; pas de boucle infinie.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "N06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Réseau QA UDP bloqué/restrictif, relais si possible et délai borné sinon.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T27"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Réseau QA UDP bloqué/restrictif, relais si possible et délai borné sinon.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T27"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Réseau QA UDP bloqué/restrictif, relais si possible et délai borné sinon."
+    },
+    {
+      "id": "N07",
+      "expected": "Coordination ou TURN indisponible, certificat invalide, quota épuisé : refus explicite ; direct local disponible préservé ; aucun dépassement payant automatique.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "N07",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Service indisponible/TLS invalide/quota épuisé : refus explicite, aucun dépassement payant ; LAN préservé.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T27"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Service indisponible/TLS invalide/quota épuisé : refus explicite, aucun dépassement payant ; LAN préservé.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T27"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Service indisponible/TLS invalide/quota épuisé : refus explicite, aucun dépassement payant ; LAN préservé."
+    },
+    {
+      "id": "N08",
+      "expected": "Installation personnelle du service : configuration dans AIM, nouvelle association et mêmes parcours lecture/IA/reprise ; aucun compte Supabase obligatoire.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "N08",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément TURN/logos : IND-001 corrigé ; 100 tests serveur et 69 cas IPv4 indépendants réussis, sans déploiement.",
+        "remaining_conditions": "Installation personnelle depuis guide, association QA distincte, lecture/inférence/reprise sans compte Supabase.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T27"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Installation personnelle depuis guide, association QA distincte, lecture/inférence/reprise sans compte Supabase.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/TURN_LOGOS_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T27"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Installation personnelle depuis guide, association QA distincte, lecture/inférence/reprise sans compte Supabase."
+    },
+    {
+      "id": "N09",
+      "expected": "Mesures de trafic, expiration et révocation des allocations, limites par appareil, alertes et coût forfaitaire ≤20 €/mois démontrés.",
+      "owner_status": "À PRÉPARER puis TESTER",
+      "followup": {
+        "id": "N09",
+        "owner_status": "À PRÉPARER puis TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Mesures/expiration/révocation/quotas/alertes/coût réel dans devis <=20 EUR/mois sans dépassement automatique.",
+        "reproducible_commands": [
+          "npm --prefix server/direct test"
+        ],
+        "procedure": [
+          "T27"
+        ],
+        "dependencies": [
+          "N01 : infrastructure TLS/TURN et devis approuvé ; créneau réseaux distincts"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "N01 préparé",
+          "Deux réseaux réels pour la preuve Internet",
+          "Aucun nouvel hébergement sans devis autorisé"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Mesures/expiration/révocation/quotas/alertes/coût réel dans devis <=20 EUR/mois sans dépassement automatique.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T27"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "N01 préparé",
+        "Deux réseaux réels pour la preuve Internet",
+        "Aucun nouvel hébergement sans devis autorisé"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls N09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Mesures/expiration/révocation/quotas/alertes/coût réel dans devis <=20 EUR/mois sans dépassement automatique."
+    },
+    {
+      "id": "F01",
+      "expected": "Chat, Code et Agent : création, résultat, erreur, annulation, reprise ; bon modèle et bonne cible sur Mac/iPhone. Les opérations sensibles demandent l'approbation prévue.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F01",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Chat/Code/Agent création/erreur/annulation/reprise avec fournisseur déterministe QA puis route réelle disponible.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F01"
+        ],
+        "procedure": [
+          "T18"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Chat/Code/Agent création/erreur/annulation/reprise avec fournisseur déterministe QA puis route réelle disponible.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA12 : intégration SourceKit réelle sous barrière Contacts encore en échec ; crash pipe fermé corrigé",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          },
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T18"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMAgentRuntimeTests/DirectRemoteRuntimeAuthorizationTests.swift",
+        "apps/macos/Tests/AIMAgentRuntimeTests/RuntimeRemoteControlTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteRuntimeAuthorizationTests",
+            "RuntimeRemoteControlTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Chat/Code/Agent création/erreur/annulation/reprise avec fournisseur déterministe QA puis route réelle disponible."
+    },
+    {
+      "id": "F02",
+      "expected": "Outil terminal dans un dossier temporaire : commande inoffensive approuvée, refus sans accord, annulation et limites d'exécution effectives.",
+      "owner_status": "À TESTER après droits/approbations",
+      "followup": {
+        "id": "F02",
+        "owner_status": "À TESTER après droits/approbations",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Terminal dans dossier jetable, refus puis approbation distincte, annulation et limites ; droits hôte effectifs.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F02"
+        ],
+        "procedure": [
+          "T18"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Terminal dans dossier jetable, refus puis approbation distincte, annulation et limites ; droits hôte effectifs.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [
+        "T18"
+      ],
+      "developer_preparations": [],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMAgentRuntimeTests/DirectRemoteRuntimeAuthorizationTests.swift",
+        "apps/macos/Tests/AIMAgentRuntimeTests/RuntimeRemoteControlTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteRuntimeAuthorizationTests",
+            "RuntimeRemoteControlTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Terminal dans dossier jetable, refus puis approbation distincte, annulation et limites ; droits hôte effectifs."
+    },
+    {
+      "id": "F03",
+      "expected": "Computer use/navigateur : observation fraîche, bonne fenêtre, priorité utilisateur, refus quand verrouillé/non autorisé ; aucun résultat inventé.",
+      "owner_status": "À TESTER avec pages/apps de qualification",
+      "followup": {
+        "id": "F03",
+        "owner_status": "À TESTER avec pages/apps de qualification",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Page/app QA : observation fraîche, bonne fenêtre, refus verrouillage, priorité utilisateur et accord visuel à usage unique.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F03"
+        ],
+        "procedure": [
+          "Contrôle d'applications et navigateur de qualification"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Page/app QA : observation fraîche, bonne fenêtre, refus verrouillage, priorité utilisateur et accord visuel à usage unique.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Contrôle d'applications et navigateur de qualification"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/ToolVisionNavigationTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/RemoteLockRulesTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "RemoteLockRulesTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "ToolVisionNavigationTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Page/app QA : observation fraîche, bonne fenêtre, refus verrouillage, priorité utilisateur et accord visuel à usage unique."
+    },
+    {
+      "id": "F04",
+      "expected": "Connecteurs et skills : configuration, action approuvée, erreur, révocation, mode privé ; contenu tiers traité comme données, secrets absents des journaux.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F04",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Connecteur/skill synthétique : configuration/action autorisée/erreur/révocation/mode privé et logs expurgés.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F04"
+        ],
+        "procedure": [
+          "Connecteurs et skills de qualification"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Connecteur/skill synthétique : configuration/action autorisée/erreur/révocation/mode privé et logs expurgés.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Connecteurs et skills de qualification"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/ConnectorRegistryTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Skills/NativeSkillsTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "ConnectorRegistryTests",
+            "NativeSkillsTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Connecteur/skill synthétique : configuration/action autorisée/erreur/révocation/mode privé et logs expurgés."
+    },
+    {
+      "id": "F05",
+      "expected": "Voix, dictée et médias si exposés : consentement, démarrage/arrêt, erreur, interruption, données et coûts ; absence d'enregistrement/transport inattendu.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Image mock réparée puis voix/dictée/médias réellement exposés avec consentement/arrêt/interruption ; pas de fournisseur vocal nouveau.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F05"
+        ],
+        "procedure": [
+          "T17"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Image mock réparée puis voix/dictée/médias réellement exposés avec consentement/arrêt/interruption ; pas de fournisseur vocal nouveau.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [
+        "T17"
+      ],
+      "developer_preparations": [
+        "Voix, dictée, médias et génération image"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/ImageGenerationModelTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ImageGenerationModelTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Image mock réparée puis voix/dictée/médias réellement exposés avec consentement/arrêt/interruption ; pas de fournisseur vocal nouveau."
+    },
+    {
+      "id": "F06",
+      "expected": "Synchronisation et imports explicites : comptes/profils distincts, conflit, hors ligne, suppression/révocation et reprise ; aucun mélange local/cloud implicite.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F06",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Profils/comptes isolés et conflits/tombstones/imports hors ligne ; serveur jetable, pas production.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F06"
+        ],
+        "procedure": [
+          "Profils, synchronisation et imports isolés"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Profils/comptes isolés et conflits/tombstones/imports hors ligne ; serveur jetable, pas production.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Profils, synchronisation et imports isolés"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/AccountChatSyncTests.swift",
+        "apps/macos/Tests/AIMMacPlatformTests/ProfileScopedCredentialStoreTests.swift",
+        "apps/macos/Tests/AIMMacTests/MacLocalProfileStoreTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "AccountChatSyncTests",
+            "MacLocalProfileStoreTests",
+            "ProfileScopedCredentialStoreTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Profils/comptes isolés et conflits/tombstones/imports hors ligne ; serveur jetable, pas production."
+    },
+    {
+      "id": "F07",
+      "expected": "Remote Supabase auto-hébergé : authentification, appareil/compte/profil corrects, commande chiffrée, approbation et révocation ; appairages existants préservés.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F07",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Clients natifs vers Supabase jetable : comptes/appareils/profils, RPC chiffré, accord et révocation.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F07"
+        ],
+        "procedure": [
+          "Serveur Supabase isolé et clients natifs"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Clients natifs vers Supabase jetable : comptes/appareils/profils, RPC chiffré, accord et révocation.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Serveur Supabase isolé et clients natifs"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/RemoteEnvelopeCryptoTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/RemoteSecurityTransportTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "RemoteEnvelopeCryptoTests",
+            "RemoteSecurityTransportTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Clients natifs vers Supabase jetable : comptes/appareils/profils, RPC chiffré, accord et révocation."
+    },
+    {
+      "id": "F08",
+      "expected": "Injection de contenu dans page/document/résultat outil : aucune permission, clé ou commande sensible accordée par le contenu seul.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F08",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Instructions malveillantes page/document/outil : aucune permission/clé/commande accordée par ce seul contenu.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F08"
+        ],
+        "procedure": [
+          "Fixtures de sécurité et de coûts"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Instructions malveillantes page/document/outil : aucune permission/clé/commande accordée par ce seul contenu.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Fixtures de sécurité et de coûts"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Skills/NativeSkillsTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "NativeSkillsTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Instructions malveillantes page/document/outil : aucune permission/clé/commande accordée par ce seul contenu."
+    },
+    {
+      "id": "F09",
+      "expected": "URL privée/loopback, redirection vers réseau interdit, image/page trop grosse ou malformée, SVG actif/ressource distante : protections réseau/décodage effectives.",
+      "owner_status": "À TESTER avec fixtures isolées",
+      "followup": {
+        "id": "F09",
+        "owner_status": "À TESTER avec fixtures isolées",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément TURN/logos : IND-002 corrigé ; 25 tests ciblés rejoués, Core 437 exécutés/21 Swift Testing, Mac 18 et UI simulateur 2 réussis ; rendu physique non observé.",
+        "remaining_conditions": "Fixtures réseau/décodage hostiles puis rendu : URL privée, redirects, SVG actif, tailles ; aucun accès privé réel.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F09"
+        ],
+        "procedure": [
+          "Fixtures de sécurité et de coûts"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Fixtures réseau/décodage hostiles puis rendu : URL privée, redirects, SVG actif, tailles ; aucun accès privé réel.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/TURN_LOGOS_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Fixtures de sécurité et de coûts"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/SourceFaviconStoreTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Chat/StaticSVGIconRendererTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "SourceFaviconStoreTests",
+            "StaticSVGIconRendererTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Fixtures réseau/décodage hostiles puis rendu : URL privée, redirects, SVG actif, tailles ; aucun accès privé réel."
+    },
+    {
+      "id": "F10",
+      "expected": "Rejeu, ordre inversé, mauvais expéditeur, ancienne révision, mauvais profil, enveloppe altérée : refus côté exécutant, aucune action répétée.",
+      "owner_status": "À TESTER ; preuves synthétiques à joindre séparément",
+      "followup": {
+        "id": "F10",
+        "owner_status": "À TESTER ; preuves synthétiques à joindre séparément",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Rejeu/ordre/expéditeur/révision/profil/ciphertext altéré : refus sans second effet ; preuves natives isolées séparées.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F10"
+        ],
+        "procedure": [
+          "Fixtures de sécurité et de coûts"
+        ],
+        "dependencies": [
+          "QA01 pilote accepté ; QA08 intermittence native reste ouverte, sans bloquer les suites unitaires",
+          "QA08 : caractériser le timeout natif avant qualification native fiable"
+        ],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique",
+          "2-correction-identifiee"
+        ],
+        "next_action": "Rejeu/ordre/expéditeur/révision/profil/ciphertext altéré : refus sans second effet ; preuves natives isolées séparées.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Fixtures de sécurité et de coûts"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMMacTests/DirectRemoteAccessTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteClientServiceTests.swift",
+        "packages/AIMCore/Tests/AIMCoreTests/Remote/DirectRemoteTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "core",
+          "suites": [
+            "DirectRemoteClientServiceTests",
+            "DirectRemoteTests"
+          ]
+        },
+        {
+          "package": "macos",
+          "suites": [
+            "DirectRemoteAccessTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F10",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Rejeu/ordre/expéditeur/révision/profil/ciphertext altéré : refus sans second effet ; preuves natives isolées séparées."
+    },
+    {
+      "id": "F11",
+      "expected": "Mode privé : connexions interdites effectivement arrêtées/refusées, reprise contrôlée ; données conservées.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "F11",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Activer mode privé dans app QA, réseau réellement arrêté/refusé et reprise explicite ; données conservées.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --target software --controls F11"
+        ],
+        "procedure": [
+          "Mode privé"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "3-creneau-physique"
+        ],
+        "next_action": "Activer mode privé dans app QA, réseau réellement arrêté/refusé et reprise explicite ; données conservées.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/REPRISE_TESTS_2026-10-19_FR.md",
+          "docs/qa/COMPLEMENT_TESTS_INDEPENDANTS_2026-10-19_FR.md",
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Mode privé"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés"
+      ],
+      "supporting_tests": [
+        "apps/macos/Tests/AIMApplicationTests/ActivityPrivacyPolicyTests.swift"
+      ],
+      "supporting_selectors": [
+        {
+          "package": "macos",
+          "suites": [
+            "ActivityPrivacyPolicyTests"
+          ]
+        }
+      ],
+      "required_acceptance_evidence": "physical-device",
+      "execution": "assisted-device",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls F11",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Activer mode privé dans app QA, réseau réellement arrêté/refusé et reprise explicite ; données conservées."
+    },
+    {
+      "id": "P01",
+      "expected": "Checkout neuf sans dossiers locaux privés : instructions Mac/iOS/simulateur exécutables, dépendances et artefacts natifs reproductibles/pinnés.",
+      "owner_status": "À TESTER sur le candidat final",
+      "followup": {
+        "id": "P01",
+        "owner_status": "À TESTER sur le candidat final",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Checkout neuf au commit final, dépendances/artifacts reconstruits sans dossier privé ; succès cache actuel distinct.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --suite release --target software --component all",
+          "python3 scripts/qa/run.py --target simulator --ios-tests unit"
+        ],
+        "procedure": [
+          "Reproductibilité et CI sur candidat final"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Checkout neuf au commit final, dépendances/artifacts reconstruits sans dossier privé ; succès cache actuel distinct.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA12 : intégration SourceKit réelle sous barrière Contacts encore en échec ; crash pipe fermé corrigé",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          },
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Reproductibilité et CI sur candidat final"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Checkout neuf au commit final, dépendances/artifacts reconstruits sans dossier privé ; succès cache actuel distinct."
+    },
+    {
+      "id": "P02",
+      "expected": "CI complète, tests ciblés et audit de publication passent sur le commit exact ; aucun secret, donnée personnelle, sauvegarde, certificat privé ou artefact non prévu.",
+      "owner_status": "PARTIEL — corrections : audits locaux publication/inventaire passent, régressions logicielles vérifiées ; 60 droits release encore ouverts et CI sur commit final exact non exécutée",
+      "followup": {
+        "id": "P02",
+        "owner_status": "PARTIEL — corrections : audits locaux publication/inventaire passent, régressions logicielles vérifiées ; 60 droits release encore ouverts et CI sur commit final exact non exécutée",
+        "evidence_acquired": "Audits locaux publication et inventaire passent ; contrôle release assets reste en échec sur 60 droits. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "CI sur commit final après vérification quotas, inventaire publié exact et scans ; aucun lancement CI automatique.",
+        "reproducible_commands": [
+          "python3 scripts/audit-publication.py --format json",
+          "python3 scripts/audit-assets.py --check"
+        ],
+        "procedure": [
+          "Reproductibilité et CI sur candidat final"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "CI sur commit final après vérification quotas, inventaire publié exact et scans ; aucun lancement CI automatique.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md",
+          "docs/qa/RETOUR_PROPRIETAIRE_2026-10-20_FR.md",
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA13 : validation stricte des reçus Direct natifs à corriger ; preuve synthétique distincte des essais produit",
+            "resolved_by": "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md"
+          }
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Reproductibilité et CI sur candidat final"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "CI sur commit final après vérification quotas, inventaire publié exact et scans ; aucun lancement CI automatique."
+    },
+    {
+      "id": "P03",
+      "expected": "Licences du code et dépendances, notices libdatachannel/coturn et dépendances, sources de modifications à fournir, attributions et droits des assets validés.",
+      "owner_status": "À PRÉPARER — 60 droits historiques ouverts ; deux icônes MIT inventoriées ; notices et liste Mac complétées en QA, obligations/composition des distributions finales à revoir",
+      "followup": {
+        "id": "P03",
+        "owner_status": "À PRÉPARER — 60 droits historiques ouverts ; deux icônes MIT inventoriées ; notices et liste Mac complétées en QA, obligations/composition des distributions finales à revoir",
+        "evidence_acquired": "Deux icônes SwiftUI inventoriées, hash à la révision MIT vérifié ; notices natives et liste Mac complétées. 60 droits historiques ouverts.",
+        "remaining_conditions": "60 décisions avec preuves valides ; notices des binaires exacts, composants optionnels, sources MPL et liste licences à revoir.",
+        "reproducible_commands": [
+          "python3 scripts/audit-assets.py --check --release"
+        ],
+        "procedure": [
+          "Droits et licences"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "60 décisions avec preuves valides ; notices des binaires exacts, composants optionnels, sources MPL et liste licences à revoir.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Droits et licences"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "60 décisions avec preuves valides ; notices des binaires exacts, composants optionnels, sources MPL et liste licences à revoir."
+    },
+    {
+      "id": "P04",
+      "expected": "Signature et notarisation de distribution Mac, helper, permissions et installation depuis téléchargement neuf, sans contournement de sécurité.",
+      "owner_status": "À TESTER — signature de qualification insuffisante",
+      "followup": {
+        "id": "P04",
+        "owner_status": "À TESTER — signature de qualification insuffisante",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Developer ID/notarisation/helper et téléchargement neuf ; pas de contournement Gatekeeper.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Distribution Mac et mise à jour Sparkle"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Developer ID/notarisation/helper et téléchargement neuf ; pas de contournement Gatekeeper.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Distribution Mac et mise à jour Sparkle"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P04",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Developer ID/notarisation/helper et téléchargement neuf ; pas de contournement Gatekeeper."
+    },
+    {
+      "id": "P05",
+      "expected": "Vraie mise à jour Mac/Sparkle signée : bon canal, vérification de signature, conservation des données/droits et retour arrière documenté.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "P05",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Mise à jour Sparkle signée sur canal final, versions/empreintes, sauvegarde actuelle et rollback.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Distribution Mac et mise à jour Sparkle"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Mise à jour Sparkle signée sur canal final, versions/empreintes, sauvegarde actuelle et rollback.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Distribution Mac et mise à jour Sparkle"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P05",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Mise à jour Sparkle signée sur canal final, versions/empreintes, sauvegarde actuelle et rollback."
+    },
+    {
+      "id": "P06",
+      "expected": "Distribution iPhone retenue et mise à jour réelle : signature/profil/canal valides, numéros corrects, données et appairages conservés.",
+      "owner_status": "À TESTER — installation de développement ne valide pas le canal public",
+      "followup": {
+        "id": "P06",
+        "owner_status": "À TESTER — installation de développement ne valide pas le canal public",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Décision canal iPhone, signature/profil et vraie mise à jour conservant données/paire.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Distribution iPhone"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Décision canal iPhone, signature/profil et vraie mise à jour conservant données/paire.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Distribution iPhone"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P06",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Décision canal iPhone, signature/profil et vraie mise à jour conservant données/paire."
+    },
+    {
+      "id": "P07",
+      "expected": "Service existant : sauvegarde restaurable, migration répétée hors production, retour arrière, fermeture des anciens parcours commerciaux et archive privée de l'ancien web.",
+      "owner_status": "À PRÉPARER puis TESTER avec le propriétaire",
+      "followup": {
+        "id": "P07",
+        "owner_status": "À PRÉPARER puis TESTER avec le propriétaire",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Accord production, sauvegarde restaurable et répétition migration/rollback isolée ; fermeture commerciale vérifiée dans comptes propriétaire.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Migration répétée hors production"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Accord production, sauvegarde restaurable et répétition migration/rollback isolée ; fermeture commerciale vérifiée dans comptes propriétaire.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Migration répétée hors production"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P07",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Accord production, sauvegarde restaurable et répétition migration/rollback isolée ; fermeture commerciale vérifiée dans comptes propriétaire."
+    },
+    {
+      "id": "P08",
+      "expected": "Guide contributeur et utilisateur : BYOK/local, limites Remote, Mac disponible, budgets approximatifs, service personnel, dépannage et signalement de bugs sans secrets.",
+      "owner_status": "À TESTER par une lecture et installation indépendante",
+      "followup": {
+        "id": "P08",
+        "owner_status": "À TESTER par une lecture et installation indépendante",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Lecteur indépendant suit guides BYOK/local/service personnel et dépannage sans secrets.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Guides et preview de publication"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Lecteur indépendant suit guides BYOK/local/service personnel et dépannage sans secrets.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Guides et preview de publication"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P08",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Lecteur indépendant suit guides BYOK/local/service personnel et dépannage sans secrets."
+    },
+    {
+      "id": "P09",
+      "expected": "Preview landing : vrais téléchargements HTTPS, versions/empreintes/signatures exactes, liens, coordonnées, mentions et promesses correspondant au périmètre qualifié.",
+      "owner_status": "À PRÉPARER puis TESTER avant toute publication",
+      "followup": {
+        "id": "P09",
+        "owner_status": "À PRÉPARER puis TESTER avant toute publication",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Preview locale avec téléchargements HTTPS réels, version/hash/signatures exacts, mentions et promesses qualifiées.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Guides et preview de publication"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Preview locale avec téléchargements HTTPS réels, version/hash/signatures exacts, mentions et promesses qualifiées.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Guides et preview de publication"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P09",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Preview locale avec téléchargements HTTPS réels, version/hash/signatures exacts, mentions et promesses qualifiées."
+    },
+    {
+      "id": "P10",
+      "expected": "Parcours complet depuis installation neuve par une personne autre que le développeur : démarrage, modèle, premier chat, QR, droits, tâche distante et récupération.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "P10",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Autre personne réalise installation neuve puis premier chat/QR/droits/tâche/reprise.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Essai indépendant par une autre personne"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Autre personne réalise installation neuve puis premier chat/QR/droits/tâche/reprise.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Essai indépendant par une autre personne"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls P10",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Autre personne réalise installation neuve puis premier chat/QR/droits/tâche/reprise."
+    },
+    {
+      "id": "G01",
+      "expected": "Tous les contrôles ci-dessus validés sur le périmètre annoncé, sans anomalie bloquante ni preuve manquante ; changements de build analysés et retestés.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "G01",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest. Lot qualification 20/10 : 107 XCTest critiques et 31+9+6 tests Python passent ; trois campagnes natives lifecycle/permissions réussies, incident absent détecté. Échec initial du même helper conservé : QA08 reste ouvert ; QA13 corrigé. Preuves synthétiques distinctes des appareils/apps. Lot causal QA08 : annulation LAN connexe QA14 corrigée/vérifiée,107XCTest critiques,31+13+6 contrats/démarrages et5casLAN conformes ;3campagnes natives et pilote apps3passages+incident passent après clic propriétaire. QA08 initial reste ouvert, aucun statut physique promu.",
+        "remaining_conditions": "Tous contrôles obligatoires, anomalies et prérequis résolus ; analyse des changements de candidat.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --suite release --target software --component all"
+        ],
+        "procedure": [
+          "Régression finale et accord de publication"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Tous contrôles obligatoires, anomalies et prérequis résolus ; analyse des changements de candidat.",
+        "evidence_reports": [],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md",
+          "docs/qa/RETOUR_PROPRIETAIRE_2026-10-20_FR.md",
+          "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md",
+          "docs/qa/QA08_DIAGNOSTIC_2026-10-20_FR.md"
+        ],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA13 : validation stricte des reçus Direct natifs à corriger ; preuve synthétique distincte des essais produit",
+            "resolved_by": "docs/qa/QUALIFICATION_PREVERSION_MAC_2026-10-20_FR.md"
+          }
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Régression finale et accord de publication"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls G01",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Tous contrôles obligatoires, anomalies et prérequis résolus ; analyse des changements de candidat."
+    },
+    {
+      "id": "G02",
+      "expected": "Sur les binaires finaux : réouverture/données, modèle local, API réelle, recherche, LAN, mobile/direct, relais forcé, reprise, droits et révocation repassent.",
+      "owner_status": "À TESTER",
+      "followup": {
+        "id": "G02",
+        "owner_status": "À TESTER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports. Complément logiciel : suite Mac 1 090 exécutés/24 ignorés sans échec, deux cas natifs/12 vérifications ; SourceKit/confinement qualifiés hors contexte XCTest.",
+        "remaining_conditions": "Régression physique/API/réseaux/permissions sur binaires finaux exacts.",
+        "reproducible_commands": [
+          "python3 scripts/qa/run.py --suite release --target software --component all"
+        ],
+        "procedure": [
+          "Régression finale et accord de publication"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "1-gratuit-maintenant",
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Régression physique/API/réseaux/permissions sur binaires finaux exacts.",
+        "evidence_reports": [],
+        "resolved_dependency_history": [
+          {
+            "dependency": "QA12 : intégration SourceKit réelle sous barrière Contacts encore en échec ; crash pipe fermé corrigé",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          },
+          {
+            "dependency": "QA07 partiel : barrière Contacts valide en accès, mais tests ConfinementSecrets/ProcessLifecycle incompatibles ; isolation des sous-processus à corriger",
+            "resolved_by": "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+          }
+        ],
+        "additional_followup_reports": [
+          "docs/qa/SOURCEKIT_CONFINEMENT_2026-10-19_FR.md"
+        ]
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Régression finale et accord de publication"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls G02",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Régression physique/API/réseaux/permissions sur binaires finaux exacts."
+    },
+    {
+      "id": "G03",
+      "expected": "Revue du dossier de preuves avec le propriétaire puis accord explicite pour publier le dépôt, le site et les applications. Publication effectuée seulement après cet accord.",
+      "owner_status": "À PRÉPARER",
+      "followup": {
+        "id": "G03",
+        "owner_status": "À PRÉPARER",
+        "evidence_acquired": "Support logiciel de la campagne conservé ; ne vaut pas acceptation physique. Voir suites et nouveaux rapports.",
+        "remaining_conditions": "Revue finale des preuves et accord explicite propriétaire ; aucune publication ici.",
+        "reproducible_commands": [],
+        "procedure": [
+          "Régression finale et accord de publication"
+        ],
+        "dependencies": [],
+        "prerequisites": [
+          "Identités et données de qualification isolées",
+          "Versions/binaires et environnement relevés",
+          "Candidat final exact et prérequis du registre propriétaire"
+        ],
+        "branches": [
+          "4-decision-ou-manipulation-proprietaire"
+        ],
+        "next_action": "Revue finale des preuves et accord explicite propriétaire ; aucune publication ici.",
+        "evidence_reports": []
+      },
+      "owner_scenarios": [],
+      "developer_preparations": [
+        "Régression finale et accord de publication"
+      ],
+      "prerequisites": [
+        "Identités et données de qualification isolées",
+        "Versions/binaires et environnement relevés",
+        "Candidat final exact et prérequis du registre propriétaire"
+      ],
+      "supporting_tests": [],
+      "supporting_selectors": [],
+      "required_acceptance_evidence": "owner-review",
+      "execution": "owner-review",
+      "physical_test_selector": null,
+      "command": "python3 scripts/qa/run.py --suite quick --target software --controls G03",
+      "missing_evidence": "Le support automatisé ne clôture pas ce contrôle. Exécuter les scénarios/préparations sur le candidat requis et revoir les preuves.",
+      "next_action": "Revue finale des preuves et accord explicite propriétaire ; aucune publication ici."
+    }
+  ]
+}

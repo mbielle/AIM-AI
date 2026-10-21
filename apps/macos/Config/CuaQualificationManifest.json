@@ -1,0 +1,23 @@
+{
+  "entries": [
+    {
+      "capabilities": {
+        "ax_click": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "observe": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "pixel_click": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "press_key": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "scroll": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "set_value": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6",
+        "type_text": "de0184f7c51558ad019ea541b0406fad7743f0570ab29325dc04a569aa53b0e6"
+      },
+      "key": {
+        "adapterContract": "aim-cua-adapter-2026-10-02",
+        "driverSHA256": "cdhash:733723c6deed983e2d5d13381df16be1c504b2a2",
+        "driverVersion": "0.28.2",
+        "osBuild": "26A428"
+      },
+      "qualifiedAt": "2026-10-02T14:07:44Z"
+    }
+  ],
+  "version": 1
+}

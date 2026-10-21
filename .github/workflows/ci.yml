@@ -1,0 +1,70 @@
+name: Verify source
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      run_ios_ui:
+        description: 'Run isolated iPhone UI tests (check available macOS minutes first)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  swift:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        component: [core, macos, ios-build]
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift --version && xcodebuild -version
+      - name: Build pinned native WebRTC dependency
+        if: matrix.component != 'core'
+        run: python3 scripts/direct/build-native.py --cache "$RUNNER_TEMP/aim-direct" --fetch --assemble
+      - run: ./scripts/check.sh ${{ matrix.component }}
+      # Opt-in uses the existing macOS job; no extra hosted run is triggered by
+      # the local automation setup. Check plan/quota before opting in.
+      - name: Execute iPhone UI tests on isolated simulator
+        if: matrix.component == 'ios-build' && github.event_name == 'workflow_dispatch' && inputs.run_ios_ui
+        run: python3 scripts/qa/run.py --suite quick --target simulator
+      - name: Retain iPhone test results
+        if: always() && matrix.component == 'ios-build' && github.event_name == 'workflow_dispatch' && inputs.run_ios_ui
+        uses: actions/upload-artifact@v4
+        with:
+          name: iphone-ui-evidence
+          path: |
+            build/qa-runs/**/report.json
+            build/qa-runs/**/report.md
+            build/qa-runs/**/*.log
+            build/qa-runs/**/ios.xcresult
+          retention-days: 7
+  web-server-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify qualification register and runner
+        run: |
+          python3 scripts/qa/catalog.py --check
+          python3 -m unittest discover -s scripts/qa -p 'test_*.py' -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26'
+      - run: python3 scripts/audit-publication.py --self-test
+      - run: python3 scripts/audit-publication.py
+      - run: python3 scripts/audit-assets.py --self-test
+      - run: python3 scripts/audit-assets.py --check
+      - run: python3 apps/macos/scripts/test_verify_mlx_license_bundle.py
+      - run: PYTHONDONTWRITEBYTECODE=1 python3 apps/macos/scripts/test_qualification_source_paths.py
+      - run: PYTHONDONTWRITEBYTECODE=1 python3 apps/macos/scripts/test_validate_client_config.py
+      - run: npm ci --prefix server
+      - run: npm ci --prefix server/direct --ignore-scripts --no-audit --no-fund
+      - run: npm --prefix server/direct test
+      - run: docker build --tag aim-direct-ci server/direct
+      - run: npm --prefix server run test:types
+      - run: npm --prefix server test
+      - run: npm --prefix server run test:database
+      - run: npm ci --prefix website
+      - run: npm --prefix website test
+      - run: npm --prefix website run build

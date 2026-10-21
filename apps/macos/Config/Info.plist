@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>AIM AI</string>
+    <key>CFBundleExecutable</key>
+    <string>AIMMac</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.aimai.macos</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>AIM AI</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>0.1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon.png</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.aimai.macos.auth</string>
+            <key>CFBundleURLSchemes</key>
+            <array><string>aimmac</string></array>
+        </dict>
+    </array>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.productivity</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>AIM AI uses the microphone only when you record a voice prompt, request transcription or start a live voice conversation.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>AIM AI transcribes your voice prompt on this Mac only when you start dictation.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>AIM AI uses the camera only when you choose to attach a photo.</string>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>AIM AI captures a selected window only when an approved visual tool needs it.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>AIM AI may automate a specific app only after you approve the related tool.</string>
+    <key>NSRemindersFullAccessUsageDescription</key>
+    <string>AIM AI reads or creates reminders only when you use an approved Agent reminder tool.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>AIM AI searches your contacts only when you approve an Agent contacts search.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>AIM AI reads or creates calendar events only when you use an approved Agent calendar tool.</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
+    <key>SUScheduledCheckInterval</key>
+    <integer>3600</integer>
+    <key>SUAutomaticallyUpdate</key>
+    <false/>
+<key>NSLocalNetworkUsageDescription</key>
+<string>AIM connects this iPhone and Mac directly on your local network when you enable Remote pairing.</string>
+<key>NSBonjourServices</key>
+<array><string>_aimdirect._tcp</string></array>
+</dict>
+</plist>

@@ -1,0 +1,10 @@
+#include "Base.xcconfig"
+
+SWIFT_COMPILATION_MODE = wholemodule
+CURRENT_PROJECT_VERSION = 43
+AIM_APNS_ENVIRONMENT = production
+AIM_APNS_SERVER_ENVIRONMENT = production
+
+// App target only: passing PROVISIONING_PROFILE_SPECIFIER globally also applies
+// an app profile to Swift Package resource bundles, which cannot use one.
+PROVISIONING_PROFILE_SPECIFIER = $(AIM_APP_STORE_PROFILE_SPECIFIER)

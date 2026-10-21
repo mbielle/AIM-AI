@@ -1,0 +1,316 @@
+/* AIM landing (v4) — tokens and the few styles Tailwind utilities can't express cleanly.
+   Everything is scoped under .aim-landing so the app's theme never leaks in or out. */
+
+.aim-landing {
+  --l-night: #0a0a0b;
+  --l-night-2: #111113;
+  /* Cool, very light gray page (Space-like), with white surfaces raised on it. */
+  --l-paper: #eef0f3;
+  --l-surface: #f8f9fa;
+  --l-white: #ffffff;
+  --l-ink: #0b0b0c;
+  --l-ink-2: #34373c;
+  --l-mute: #6b6f76;
+  --l-mute-d: #8e939b;
+  --l-faint-d: #6a6f77;
+  --l-line: rgba(11, 11, 12, 0.08);
+  --l-line-d: rgba(255, 255, 255, 0.09);
+  --l-cool-ink: #5b6b80;
+  --l-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --l-muted-title: #9097a1;
+  --l-nav: 72px;
+  --l-shadow-soft: 0 1px 2px rgba(15, 18, 24, 0.04), 0 12px 32px -12px rgba(15, 18, 24, 0.1), 0 40px 80px -40px rgba(15, 18, 24, 0.14);
+  --l-shadow-float: 0 0 0 1px rgba(15, 18, 24, 0.06), 0 2px 6px rgba(15, 18, 24, 0.06), 0 24px 48px -16px rgba(15, 18, 24, 0.28);
+
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-feature-settings: 'cv11', 'ss01';
+  color: var(--l-ink);
+  background: var(--l-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.aim-landing ::selection {
+  background: #c9d3e0;
+  color: #0b0b0c;
+}
+
+/* The app's global stylesheet removes every focus outline and focus box-shadow with !important.
+   Restore both inside the landing only (higher specificity), so keyboard focus is always visible
+   and outlined buttons keep their ring when focused. */
+.aim-landing *:focus-visible {
+  outline: 2px solid #8fa3bc !important;
+  outline-offset: 3px !important;
+}
+
+.aim-landing :is(a, button):focus {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow, 0 0 #0000) !important;
+}
+
+.aim-landing .l-display {
+  font-size: clamp(46px, 6vw, 104px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.aim-landing .l-h2 {
+  font-size: clamp(32px, 4.6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.aim-landing .l-h3 {
+  font-size: clamp(28px, 2.8vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.032em;
+  font-weight: 600;
+}
+
+.aim-landing .l-lead {
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.5;
+  letter-spacing: -0.012em;
+}
+
+.aim-landing .l-eyebrow {
+  font: 500 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Second line of a two-tone title. */
+.aim-landing .l-title-muted {
+  color: var(--l-muted-title);
+}
+
+/* Fine film grain over the light page: one fixed layer, never over the dark hero (it sits above). */
+.aim-landing .l-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.45 0 0 0 0 0.52 0 0 0 0.10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Raised white surface for cards and panels. */
+.aim-landing .l-surface {
+  background: var(--l-surface);
+  box-shadow: 0 0 0 1px rgba(15, 18, 24, 0.05), var(--l-shadow-soft);
+}
+
+/* A cropped capture inside a card or preview: a hairline only. */
+.aim-landing .l-media-card {
+  background: #e9ecf0;
+  box-shadow: inset 0 0 0 1px rgba(15, 18, 24, 0.06);
+}
+
+/* Floating preview that follows the cursor. */
+.aim-landing .l-float {
+  box-shadow: var(--l-shadow-float);
+}
+
+/* Where a capture will go: a calm cool surface with a faint dot grid, no fake interface. */
+.aim-landing .l-placeholder {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(91, 107, 128, 0.16) 1px, transparent 1.2px) 0 0 / 14px 14px,
+    radial-gradient(80% 90% at 85% 100%, rgba(190, 200, 214, 0.55) 0%, rgba(190, 200, 214, 0) 60%),
+    linear-gradient(160deg, #eef1f5 0%, #e2e7ed 100%);
+}
+
+/* Content passing under the floating navigation softens and fades. */
+.aim-landing .l-top-fade {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: calc(var(--l-nav) + 16px);
+  pointer-events: none;
+  z-index: 40;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(238, 240, 243, 0.85) 0%, rgba(238, 240, 243, 0) 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 100%);
+  transition: opacity 300ms ease-out;
+}
+
+/* Scroll-scrub measurements (?debug=scrub). */
+.aim-landing .l-scrub-debug {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 70;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(10, 10, 11, 0.86);
+  color: #e8eaed;
+  font: 500 11.5px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+  pointer-events: none;
+}
+
+/* Apple-like window: a fine outline, a measured contact shadow and a soft neutral fall-off. */
+.aim-landing .l-window {
+  box-shadow:
+    0 0 0 1px rgba(15, 18, 24, 0.1),
+    0 1px 2px rgba(15, 18, 24, 0.06),
+    0 18px 40px -18px rgba(15, 18, 24, 0.16),
+    0 50px 100px -40px rgba(15, 18, 24, 0.2);
+}
+
+/* Section-wide ambient field behind the first window: no edges, fades into the page. */
+.aim-landing .l-ambient {
+  background:
+    radial-gradient(70% 60% at 50% 42%, rgba(222, 228, 236, 0.9) 0%, rgba(232, 236, 241, 0.55) 38%, rgba(250, 250, 250, 0) 72%),
+    linear-gradient(180deg, rgba(240, 242, 245, 0) 0%, rgba(240, 242, 245, 0.6) 40%, rgba(250, 250, 250, 0) 100%);
+}
+
+/* Local staging panel for a detailed feature: rectangular, discreet corners, sober cool gray. */
+.aim-landing .l-stage {
+  background:
+    radial-gradient(90% 80% at 15% 10%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(80% 90% at 90% 100%, rgba(190, 200, 214, 0.55) 0%, rgba(190, 200, 214, 0) 60%),
+    linear-gradient(160deg, #e9edf2 0%, #dde3ea 55%, #e4e8ee 100%);
+}
+
+/* Staging field for the iPhone close-up: cool at the top, lightening towards the bottom fade. */
+.aim-landing .l-stage-soft {
+  background:
+    radial-gradient(70% 60% at 20% 0%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(60% 70% at 95% 20%, rgba(196, 206, 219, 0.6) 0%, rgba(196, 206, 219, 0) 65%),
+    linear-gradient(180deg, #dce3ea 0%, #e5e9ef 55%, #eef1f4 100%);
+}
+
+/* Presentation fade over the lower part of the scene (never over text or controls). */
+.aim-landing .l-fade-bottom {
+  background: linear-gradient(180deg, rgba(238, 241, 244, 0) 0%, rgba(238, 241, 244, 0.82) 62%, #eef1f4 100%);
+}
+
+/* iPhone close-up: light, translucent surround (the screen itself stays opaque). */
+.aim-landing .l-phone {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  backdrop-filter: blur(18px) saturate(1.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.85),
+    0 0 0 1px rgba(15, 18, 24, 0.06),
+    0 30px 70px -40px rgba(15, 18, 24, 0.28);
+}
+
+.aim-landing .l-serif {
+  font-family: Lora, Georgia, 'Times New Roman', serif;
+}
+
+.aim-landing .l-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aim-landing *,
+  .aim-landing *::before,
+  .aim-landing *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Legal pages: readable long-form text. */
+.aim-landing .l-legal section + section {
+  margin-top: 56px;
+}
+
+.aim-landing .l-legal h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: #0b0b0c;
+  margin-bottom: 16px;
+}
+
+.aim-landing .l-legal p,
+.aim-landing .l-legal li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #34373c;
+}
+
+.aim-landing .l-legal p + p,
+.aim-landing .l-legal p + ul,
+.aim-landing .l-legal ul + p,
+.aim-landing .l-legal div + p,
+.aim-landing .l-legal p + div {
+  margin-top: 14px;
+}
+
+.aim-landing .l-legal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.aim-landing .l-legal li + li {
+  margin-top: 8px;
+}
+
+.aim-landing .l-legal strong {
+  font-weight: 600;
+  color: #0b0b0c;
+}
+
+.aim-landing .l-legal a {
+  color: #0b0b0c;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 11, 12, 0.25);
+  text-underline-offset: 3px;
+}
+
+.aim-landing .l-legal a:hover {
+  text-decoration-color: currentColor;
+}
+
+.aim-landing .l-legal code {
+  font: 500 13.5px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.aim-landing .l-legal-callout {
+  border-radius: 12px;
+  background: #f1f3f6;
+  padding: 16px 18px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #34373c;
+}
+
+.aim-landing .l-legal-table {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(11, 11, 12, 0.09);
+}
+
+.aim-landing .l-legal-table table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+
+.aim-landing .l-legal-table th {
+  text-align: left;
+  font-weight: 500;
+  color: #6b6f76;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(11, 11, 12, 0.08);
+}
+
+.aim-landing .l-legal-table td {
+  vertical-align: top;
+  padding: 12px 14px;
+  color: #34373c;
+  border-bottom: 1px solid rgba(11, 11, 12, 0.06);
+}
+
+.aim-landing .l-legal-table tr:last-child td {
+  border-bottom: 0;
+}

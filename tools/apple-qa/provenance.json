@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "scope": "project-only",
+  "reviewed_at": "2026-10-19",
+  "skills": [
+    {
+      "name": "swift-testing-expert",
+      "repository": "https://github.com/AvdLee/Swift-Testing-Agent-Skill",
+      "revision": "798e9b1a2bcac164d4f0c781908199e754f0bab6",
+      "files_sha256": {
+        "LICENSE": "8f5fd8e5cddb015b5627e45e68b256356586144288a4a0a3db87e38bcb0c9155",
+        "SKILL.md": "d039eb55cfbaa379d308ff42c1e459dea355edb869ec0a4d6f488759d2156aec",
+        "references/_index.md": "623f23b0e14d363928bfc6b8ed54c89c6d420fde809ee79c0f6e37ed2c4aa965",
+        "references/async-testing-and-waiting.md": "e5f7d016a95d976774d7f26a80be07acf204306aa874f60d6f501aec141c6ceb",
+        "references/expectations.md": "e3d4a57b5d162f49e8f7135e2a020eb1c2af0301782d31c1e4ac3d51a9a0dac5",
+        "references/fundamentals.md": "ad3af7d6ce9a31c2f8222a88baf9a5631de6443d2ad671764e2d183bba7019f3",
+        "references/migration-from-xctest.md": "f94a3bc08fb59358689a84d9d6a2838154dc96904e53457e068d00df5b0671ef",
+        "references/parallelization-and-isolation.md": "209cd458d3fbc8a2830265252714f5ac09abe93100b3b2582034fa7ea1a0568c",
+        "references/parameterized-testing.md": "852ea45d5cae37f3e687050be2cb728370a635129786928cadef4a9dcc8d2c09",
+        "references/performance-and-best-practices.md": "3ecd3da92d2676935863942894e5e9ef649a24b5e56f20f65fc81899297b49c2",
+        "references/traits-and-tags.md": "17dd0b7182f0abdf51f538a6bcc139ef6d501325575476c63a6d5f933312b49e",
+        "references/xcode-workflows.md": "f43407527c30bc1e346d32e4f54a5105a9c61bd071abfbfaa7b91107b4451c94"
+      }
+    },
+    {
+      "name": "swiftui-pro",
+      "repository": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "revision": "ce32af1693b9e78a7d22ff48001c97a304d32063",
+      "files_sha256": {
+        ".claude-plugin/plugin.json": "5308d1878ae120f5174153b51de23d0b42a421de7504eee040a6fcb33d676951",
+        "LICENSE": "b9b479e6df9f27cbc8e7abe91f771b396f3f0fa114d070c7c0b02c820c6b74dc",
+        "SKILL.md": "fc62139e262bd364cbbcab9b9f97557cd3fd6d2d4f73c4fab039d562fc324643",
+        "agents/openai.yaml": "429c39b71692d4dc86e2b616f28b7e7f56207361c5b5a0b06df4746af96d5fa3",
+        "assets/swiftui-pro-icon.png": "51a28a5834e6d251def3c562712db1e2124e6d67b62be89fe4c1ca628e37a70a",
+        "assets/swiftui-pro-icon.svg": "a15c0a3030f08ffcc442aed9b7f2f19840877e43f980ad4dfdef515e9aeb44b3",
+        "references/accessibility.md": "46f865d3e5cf63f4394e8d55628e06897bf9eec7409d69331931225eac69a198",
+        "references/api.md": "a12fb9dcc02093b560dd82e2882556d7cd2d6652edc0006eb24ebc14bc669448",
+        "references/data.md": "291a81fb0fc1befebcafe576d9e35cc8d47bb4d63baef50f6f2292300be797dd",
+        "references/design.md": "8f2d05504e4d51dc2a0d91d2b0a580457cd98d0145826e4c0bc35dc67f006793",
+        "references/hygiene.md": "18c945717a842912180c218c10e7e76b496c11a87a77c1be65a504c70850877c",
+        "references/localization.md": "54f1d15bd8f726409a72622964005d2732148da614dc022bf7729f68ab246571",
+        "references/navigation.md": "24b95bbaa01970ff0a6625a7a201d81191ab1746dbe317bd7583d1f3f7ce53a3",
+        "references/performance-plus.md": "b7c77ac07548f9f8b6440daab607b0fa22796fc498ca644e3fa9890ee7912068",
+        "references/performance.md": "82ee00cc74109dd7e6296dc872d410742a8584ad6d0bc4ae902fad0220392e38",
+        "references/resizability.md": "2e1a88a675fe2eaf326fb1a50fafae4123725e6b4278c311c875335651a60226",
+        "references/swift.md": "c21c2f906d902444ad41179cf4481fb1484679f8b2c61c87122e35648aee8cd9",
+        "references/views.md": "e9c7ce9ef17e23b713a2565ee9d7f5db11e036adbae1a6b9c14d21d8b3dddce7",
+        "skills/swiftui-pro/SKILL.md": "759abb2bfbcc0056a0657d211da45f29d170cbe6575af963ec926e43d5245ff8",
+        "skills/swiftui-pro/references": "d84a57d48c4cba98ffbc1be656c61626ab6c8fb6bbe0642f63903f48eec1f8b5"
+      }
+    },
+    {
+      "name": "mobilebuildmcp-cli",
+      "repository": "https://github.com/getsentry/MobileBuildMCP",
+      "revision": "npm:2.7.1",
+      "files_sha256": {
+        "SKILL.md": "754ec68f840f9d10a7530f54ed572b35e66f961f125fa2060dd2631e2ad176b0"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "package": "mobilebuildmcp",
+      "version": "2.7.1",
+      "lockfile": "tools/apple-qa/package-lock.json",
+      "install_scripts_executed": false,
+      "telemetry_disabled": true,
+      "qualified": [
+        "help",
+        "read-only simulator inventory"
+      ],
+      "physical_ui_qualified": false
+    }
+  ]
+}

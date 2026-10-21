@@ -1,0 +1,12 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { LandingPage } from './components/landing/LandingPage';
+import { LegalPage } from './LegalPage';
+import { GuidePage } from './GuidePage';
+import { UnsubscribePage } from './UnsubscribePage';
+import { InformationPage } from './InformationPage';
+import { routeFor } from './routes.js';
+import './index.css';
+const path = routeFor(window.location.pathname);
+const page = path === '/' ? <LandingPage /> : path === '/guide' ? <GuidePage /> : path === '/unsubscribe' ? <UnsubscribePage /> : path ? <LegalPage path={path} /> : <InformationPage title="Page not found"><p><a href="/">Return to AIM</a></p></InformationPage>;
+createRoot(document.getElementById('root')!).render(<React.StrictMode>{page}</React.StrictMode>);

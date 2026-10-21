@@ -1,0 +1,14 @@
+{
+  "codesign_identity": "Developer ID Application: YOUR LEGAL NAME (<TEAM_ID>)",
+  "expected_identity_sha1": "REPLACE_WITH_YOUR_CERTIFICATE_SHA1",
+  "team": "<TEAM_ID>",
+  "sparkle_account": "your-sparkle-key-account",
+  "sparkle_feed_url": "https://example.com/updates/appcast.xml",
+  "sparkle_public_key": "REPLACE_WITH_YOUR_SPARKLE_PUBLIC_KEY",
+  "notary_keychain_profile": "your-notary-profile",
+  "application_version": "0.1.0",
+  "application_build": "1",
+  "hosting_status": "not_configured",
+  "update_round_trip": "not_qualified",
+  "notary_profile_status": "not_configured"
+}

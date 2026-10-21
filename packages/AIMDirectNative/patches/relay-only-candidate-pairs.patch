@@ -1,0 +1,41 @@
+--- a/src/impl/icetransport.cpp
++++ b/src/impl/icetransport.cpp
+@@ -85,6 +85,8 @@
+ 	juice_set_log_level(level);
+ 
+ 	juice_config_t jconfig = {};
++	// AIM: enforce relay policy in candidate-pair admission, not only signalling.
++	jconfig.relay_only = config.iceTransportPolicy == TransportPolicy::Relay;
+ 	jconfig.cb_state_changed = IceTransport::StateChangeCallback;
+ 	jconfig.cb_candidate = IceTransport::CandidateCallback;
+ 	jconfig.cb_gathering_done = IceTransport::GatheringDoneCallback;
+--- a/deps/libjuice/include/juice/juice.h
++++ b/deps/libjuice/include/juice/juice.h
+@@ -96,6 +96,8 @@
+ } juice_ice_tcp_mode_t;
+ 
+ typedef struct juice_config {
++	// AIM extension: never admit a non-relayed local candidate pair.
++	bool relay_only;
+ 	juice_concurrency_mode_t concurrency_mode;
+ 
+ 	const char *stun_server_host;
+--- a/deps/libjuice/src/agent.c
++++ b/deps/libjuice/src/agent.c
+@@ -97,6 +97,7 @@
+ 
+ 	bool alloc_failed = false;
+ 	agent->ice_tcp_mode = JUICE_ICE_TCP_MODE_NONE;
++	agent->config.relay_only = config->relay_only;
+ 	agent->config.concurrency_mode = config->concurrency_mode;
+ 	agent->config.stun_server_host = alloc_string_copy(config->stun_server_host, &alloc_failed);
+ 	agent->config.stun_server_port = config->stun_server_port;
+@@ -2492,7 +2493,7 @@
+ int agent_add_candidate_pairs_for_remote(juice_agent_t *agent, ice_candidate_t *remote) {
+ 	// Here is the trick: local non-relayed candidates are undifferentiated for sending.
+ 	// Therefore, we don't need to match remote candidates with local ones.
+-	if (agent_add_candidate_pair(agent, NULL, remote))
++	if (!agent->config.relay_only && agent_add_candidate_pair(agent, NULL, remote))
+ 		return -1;
+ 
+ 	// However, we need still to differenciate local relayed candidates

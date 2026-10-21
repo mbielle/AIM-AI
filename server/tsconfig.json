@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"]
+  },
+  "include": [
+    "supabase/functions/**/*.ts",
+    "supabase/tests/deno-runtime.d.ts",
+    "compatibility/*.ts",
+    "optional/functions/**/*.ts"
+  ]
+}

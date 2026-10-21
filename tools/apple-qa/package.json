@@ -1,0 +1,9 @@
+{
+  "name": "aim-local-apple-qa",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Optional pinned development tool; never shipped in AIM applications",
+  "dependencies": {
+    "mobilebuildmcp": "2.7.1"
+  }
+}

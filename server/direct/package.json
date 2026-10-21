@@ -1,0 +1,9 @@
+{
+  "name": "aim-direct-coordinator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node coordinator.mjs", "test": "node --test *.test.mjs" },
+  "dependencies": { "ws": "8.22.0" }
+}

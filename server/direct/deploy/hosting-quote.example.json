@@ -1,0 +1,11 @@
+{
+  "currency": "EUR",
+  "monthlyTotalEUR": 0,
+  "billableOverage": false,
+  "automaticTopUps": false,
+  "reviewedBy": "",
+  "validUntil": "",
+  "provider": "To be selected and reviewed before any purchase",
+  "includedTrafficBytes": 0,
+  "costIncludes": ["VPS", "IPv4", "traffic", "taxes", "domain renewal if applicable"]
+}

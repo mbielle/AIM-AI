@@ -1,0 +1,19 @@
+{
+  "name": "aim-server-tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test supabase/tests/*.test.mjs scripts/*.test.mjs optional/functions/file-processor/handler.test.mjs",
+    "test:database": "node tests/bootstrap.mjs",
+    "test:types": "tsc --noEmit",
+    "test:stack": "node scripts/qualify-local-stack.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.10",
+    "typescript": "5.6.3"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}

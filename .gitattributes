@@ -1,0 +1,2 @@
+# Markdown hard-break spaces inside this renderer regression fixture are data.
+apps/macos/Sources/AIMMac/Qualification/GalleryFixtures.swift whitespace=-blank-at-eol

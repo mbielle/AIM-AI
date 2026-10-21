@@ -1,0 +1,364 @@
+{
+  "scope": "Prepared macOS arm64 runtime inputs, not a signed application or model-weight clearance",
+  "node": {
+    "node_version": "22.23.3",
+    "node_source": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-darwin-arm64.tar.gz",
+    "node_archive_sha256": "23b25245dcfb9af7262f8ff142e9e2e0af025368117329e7a7458a51e5922f53",
+    "node_signature_authenticated": false
+  },
+  "node_license_sha256": "c738ae413cf561f174e34f6961f8ca458aae2369a73640dda6234c629b98bcc4",
+  "node_binary_sha256_before_signing": "68f4d07ca49e0500cc135c7e0a445093e228e42e126ac22306d045f0a8c2636b",
+  "pnpm": {
+    "version": "10.11.0",
+    "integrity": "sha512-ZUBYP0HMX2KOs9l3Ps7oAvT575kjzEW2mJD7R5kdSwkpZGlOw6T3OKQgyRijMwYsi5JdMS9C5PDCY+tgNVH5dw==",
+    "scope": "build tool only, not bundled in application"
+  },
+  "playwright_lock_sha256": "c84412c84b241acee4bc62a5354ff70668e31805a499fece75ffac9e673c95d2",
+  "playwright_notices": [
+    {
+      "package": "@playwright/mcp",
+      "version": "0.0.82",
+      "path": "@playwright/mcp/LICENSE",
+      "sha256": "9a7110fc2d2f964038e5dc49128f908f29f47a574c961cba16085914e879cbda"
+    },
+    {
+      "package": "playwright-core",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright-core/LICENSE",
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
+    },
+    {
+      "package": "playwright-core",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright-core/NOTICE",
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
+    },
+    {
+      "package": "playwright-core",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright-core/ThirdPartyNotices.txt",
+      "sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144"
+    },
+    {
+      "package": "playwright",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright/LICENSE",
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
+    },
+    {
+      "package": "playwright",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright/NOTICE",
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
+    },
+    {
+      "package": "playwright",
+      "version": "1.64.0-alpha-1789764292000",
+      "path": "playwright/ThirdPartyNotices.txt",
+      "sha256": "b17ac0bd6f4b8207e440639cc8e0ba1bf1d9eaf9b12236764ab93b346c7abd8e"
+    }
+  ],
+  "mlx_resolved_sha256": "5fa4bd80fbcf57efe0fb6be43eae59656abe0cfd9dfd33dc1d443a390b9cc447",
+  "mlx_components": [
+    {
+      "identity": "eventsource",
+      "revision": "86b5096ac59ab46e66bd1f6377c604bc1dab0bc2",
+      "source": "https://github.com/mattt/EventSource.git",
+      "licenses": [
+        {
+          "path": "eventsource/LICENSE.md",
+          "sha256": "2f9b695627d569a3ce452b2c03fdd34310df78c8ea94edfafd9ce38381e5b502",
+          "upstream_path": "LICENSE.md",
+          "source_revision": "86b5096ac59ab46e66bd1f6377c604bc1dab0bc2"
+        }
+      ]
+    },
+    {
+      "identity": "mlx-swift",
+      "revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "source": "https://github.com/ml-explore/mlx-swift",
+      "licenses": [
+        {
+          "path": "mlx-swift/ACKNOWLEDGMENTS.md",
+          "sha256": "e838112dc077cb9499d138903d05a6843a3bb66d9ad3fba8076ad5cb8332acfb",
+          "upstream_path": "ACKNOWLEDGMENTS.md",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/LICENSE",
+          "sha256": "44326a4ea062241ae6fc26ee2ec90bdc81af7eb7b9d3966181b733fa69d42057",
+          "upstream_path": "LICENSE",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/fmt/LICENSE",
+          "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+          "upstream_path": "Source/Cmlx/fmt/LICENSE",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/fmt/doc/python-license.txt",
+          "sha256": "dcc4d9738d3e8d3b9f51286f1dc90d0c49ea8325982008ced021932a0b0b0cda",
+          "upstream_path": "Source/Cmlx/fmt/doc/python-license.txt",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/json/LICENSE.MIT",
+          "sha256": "86b998c792894ccb911a1cb7994f7a9652894e7a094c0b5e45be2f553f45cf14",
+          "upstream_path": "Source/Cmlx/json/LICENSE.MIT",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/metal-cpp/LICENSE.txt",
+          "sha256": "f4e92c7fe2aa066e294c0da9d08683dc9fb741ee6e6debbfad99a0c96e07c1f2",
+          "upstream_path": "Source/Cmlx/metal-cpp/LICENSE.txt",
+          "source_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/mlx/ACKNOWLEDGMENTS.md",
+          "sha256": "fbf1078b24ca057b31fef9297390bbe96e001258ecf4c0b108394c764e607799",
+          "upstream_path": "Source/Cmlx/mlx/ACKNOWLEDGMENTS.md",
+          "source_revision": "1f8e74e3f12f31365464a6867c6579f0e9b29d85",
+          "source": "https://github.com/ml-explore/mlx",
+          "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/mlx/LICENSE",
+          "sha256": "ccfab7ccb2ea306f71531c8ca77bb55507606cd90768b1e32b8b52ab5b48cf01",
+          "upstream_path": "Source/Cmlx/mlx/LICENSE",
+          "source_revision": "1f8e74e3f12f31365464a6867c6579f0e9b29d85",
+          "source": "https://github.com/ml-explore/mlx",
+          "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/mlx-c/ACKNOWLEDGMENTS.md",
+          "sha256": "6b91480a91653156bd97b276e9cb5d2a16c3315b07e997b1ddcfd92ab8f51d0b",
+          "upstream_path": "Source/Cmlx/mlx-c/ACKNOWLEDGMENTS.md",
+          "source_revision": "ebc88f10caa1b625e6b581437a8dea6df8a70085",
+          "source": "https://github.com/ml-explore/mlx-c",
+          "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        },
+        {
+          "path": "mlx-swift/Source/Cmlx/mlx-c/LICENSE",
+          "sha256": "44326a4ea062241ae6fc26ee2ec90bdc81af7eb7b9d3966181b733fa69d42057",
+          "upstream_path": "Source/Cmlx/mlx-c/LICENSE",
+          "source_revision": "ebc88f10caa1b625e6b581437a8dea6df8a70085",
+          "source": "https://github.com/ml-explore/mlx-c",
+          "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075"
+        }
+      ]
+    },
+    {
+      "identity": "mlx-swift-lm",
+      "revision": "3b339ad6e3b3f44c8121ecff5131c7fd55e075e6",
+      "source": "https://github.com/ml-explore/mlx-swift-lm",
+      "licenses": [
+        {
+          "path": "mlx-swift-lm/ACKNOWLEDGMENTS.md",
+          "sha256": "b4bc930dbf80aeca4c3d0325367d9f8eb6b5201b7ed37ac6e624ee6aca7cf335",
+          "upstream_path": "ACKNOWLEDGMENTS.md",
+          "source_revision": "3b339ad6e3b3f44c8121ecff5131c7fd55e075e6"
+        },
+        {
+          "path": "mlx-swift-lm/LICENSE",
+          "sha256": "7b1d86acac816ce8192209d7e01141c129b4d48d474c15cc5fb4af62f497c323",
+          "upstream_path": "LICENSE",
+          "source_revision": "3b339ad6e3b3f44c8121ecff5131c7fd55e075e6"
+        },
+        {
+          "path": "mlx-swift-lm/Libraries/MLXCXGrammar/xgrammar/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "upstream_path": "Libraries/MLXCXGrammar/xgrammar/LICENSE",
+          "source_revision": "3b339ad6e3b3f44c8121ecff5131c7fd55e075e6"
+        },
+        {
+          "path": "mlx-swift-lm/Libraries/MLXCXGrammar/xgrammar/NOTICE.with-project-license",
+          "sha256": "f08b1d755dbc7aae9f8a18d439940944ed4a8e5ba9a6bc2b8d455b94df186917",
+          "upstream_path": "Libraries/MLXCXGrammar/xgrammar/NOTICE",
+          "source_revision": "3b339ad6e3b3f44c8121ecff5131c7fd55e075e6",
+          "original_path": "mlx-swift-lm/Libraries/MLXCXGrammar/xgrammar/NOTICE",
+          "original_sha256": "769c6907073c65801bfcfe3ce1c0e80bf0ae4e124e2769d4f026c038ad583c0f"
+        }
+      ]
+    },
+    {
+      "identity": "swift-asn1",
+      "revision": "3b6410f7dee09eb33cdd26260c5fd47fda19b0e2",
+      "source": "https://github.com/apple/swift-asn1.git",
+      "licenses": [
+        {
+          "path": "swift-asn1/LICENSE.txt",
+          "sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac",
+          "upstream_path": "LICENSE.txt",
+          "source_revision": "3b6410f7dee09eb33cdd26260c5fd47fda19b0e2"
+        },
+        {
+          "path": "swift-asn1/NOTICE.txt",
+          "sha256": "11dd3b3b783e6ec26098dd38ebc962986ea109b85447e28e62867b83bd0f8c5b",
+          "upstream_path": "NOTICE.txt",
+          "source_revision": "3b6410f7dee09eb33cdd26260c5fd47fda19b0e2"
+        }
+      ]
+    },
+    {
+      "identity": "swift-collections",
+      "revision": "98ef3c98609a1e31b7e157b5b619579001a789d6",
+      "source": "https://github.com/apple/swift-collections.git",
+      "licenses": [
+        {
+          "path": "swift-collections/LICENSE.txt",
+          "sha256": "770af8291f708538d8ff885a0bbc4e045cd700531741c4f99528d435c14d7f55",
+          "upstream_path": "LICENSE.txt",
+          "source_revision": "98ef3c98609a1e31b7e157b5b619579001a789d6"
+        }
+      ]
+    },
+    {
+      "identity": "swift-crypto",
+      "revision": "da9d28d69ebe3894b18376c8f2395c2f37b8448f",
+      "source": "https://github.com/apple/swift-crypto.git",
+      "licenses": [
+        {
+          "path": "swift-crypto/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "upstream_path": "LICENSE.txt",
+          "source_revision": "da9d28d69ebe3894b18376c8f2395c2f37b8448f"
+        },
+        {
+          "path": "swift-crypto/NOTICE.txt",
+          "sha256": "b3ddc2ae068e76b3beb71be03c0400f90090f9469aa491bf7b1ac42320af37b8",
+          "upstream_path": "NOTICE.txt",
+          "source_revision": "da9d28d69ebe3894b18376c8f2395c2f37b8448f"
+        }
+      ]
+    },
+    {
+      "identity": "swift-huggingface",
+      "revision": "0ece9a1ef443309d26a69af9897ee8ad82f43a9a",
+      "source": "https://github.com/huggingface/swift-huggingface.git",
+      "licenses": [
+        {
+          "path": "swift-huggingface/LICENSE",
+          "sha256": "4d6ad72952a8329063a71de28329b493de96cf57459e2ac217110d1a6a5f84ae",
+          "upstream_path": "LICENSE",
+          "source_revision": "0ece9a1ef443309d26a69af9897ee8ad82f43a9a"
+        }
+      ]
+    },
+    {
+      "identity": "swift-jinja",
+      "revision": "4588064a20f3fc093c95f2f7d3359999bf30cae5",
+      "source": "https://github.com/huggingface/swift-jinja.git",
+      "licenses": [
+        {
+          "path": "swift-jinja/LICENSE",
+          "sha256": "648b81e6c6f9975c3b6cf6d630229b6c8d6f1ddaef55f5770f576adda19f3495",
+          "upstream_path": "LICENSE",
+          "source_revision": "4588064a20f3fc093c95f2f7d3359999bf30cae5"
+        }
+      ]
+    },
+    {
+      "identity": "swift-numerics",
+      "revision": "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+      "source": "https://github.com/apple/swift-numerics",
+      "licenses": [
+        {
+          "path": "swift-numerics/LICENSE.txt",
+          "sha256": "770af8291f708538d8ff885a0bbc4e045cd700531741c4f99528d435c14d7f55",
+          "upstream_path": "LICENSE.txt",
+          "source_revision": "0c0290ff6b24942dadb83a929ffaaa1481df04a2"
+        }
+      ]
+    },
+    {
+      "identity": "swift-syntax",
+      "revision": "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1",
+      "source": "https://github.com/swiftlang/swift-syntax.git",
+      "licenses": [
+        {
+          "path": "swift-syntax/LICENSE.txt",
+          "sha256": "770af8291f708538d8ff885a0bbc4e045cd700531741c4f99528d435c14d7f55",
+          "upstream_path": "LICENSE.txt",
+          "source_revision": "79e4b74a295b6eb74a8b585e3a39d29e70c1dbd1"
+        }
+      ]
+    },
+    {
+      "identity": "swift-transformers",
+      "revision": "c21fdcde390313a6d98d8e33a346f2c3486c3ab0",
+      "source": "https://github.com/huggingface/swift-transformers",
+      "licenses": [
+        {
+          "path": "swift-transformers/LICENSE",
+          "sha256": "648b81e6c6f9975c3b6cf6d630229b6c8d6f1ddaef55f5770f576adda19f3495",
+          "upstream_path": "LICENSE",
+          "source_revision": "c21fdcde390313a6d98d8e33a346f2c3486c3ab0"
+        }
+      ]
+    },
+    {
+      "identity": "yyjson",
+      "revision": "8b4a38dc994a110abaec8a400615567bd996105f",
+      "source": "https://github.com/ibireme/yyjson.git",
+      "licenses": [
+        {
+          "path": "yyjson/LICENSE",
+          "sha256": "45e384d3d52c73cba3a64d6e6c25d47cd738cd8a55c30629e3201046eda62947",
+          "upstream_path": "LICENSE",
+          "source_revision": "8b4a38dc994a110abaec8a400615567bd996105f"
+        }
+      ]
+    }
+  ],
+  "mlx_embedded_sources": [
+    {
+      "identity": "cmlx-mlx",
+      "source": "https://github.com/ml-explore/mlx",
+      "gitlink_revision": "1f8e74e3f12f31365464a6867c6579f0e9b29d85",
+      "parent_identity": "mlx-swift",
+      "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "path": "Source/Cmlx/mlx"
+    },
+    {
+      "identity": "cmlx-mlx-c",
+      "source": "https://github.com/ml-explore/mlx-c",
+      "gitlink_revision": "ebc88f10caa1b625e6b581437a8dea6df8a70085",
+      "parent_identity": "mlx-swift",
+      "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "path": "Source/Cmlx/mlx-c"
+    },
+    {
+      "identity": "cmlx-fmt",
+      "upstream_source": "https://github.com/fmtlib/fmt",
+      "vendored_version_label": "12.1.0",
+      "parent_identity": "mlx-swift",
+      "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "path": "Source/Cmlx/fmt",
+      "provenance": "Tracked vendored bytes at parent revision; label comes from Source/Cmlx/vendor-README.md, not an independently authenticated upstream archive."
+    },
+    {
+      "identity": "cmlx-json",
+      "upstream_source": "https://github.com/nlohmann/json",
+      "vendored_version_label": "3.11.3",
+      "parent_identity": "mlx-swift",
+      "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "path": "Source/Cmlx/json",
+      "provenance": "Tracked vendored bytes at parent revision; label comes from Source/Cmlx/vendor-README.md, not an independently authenticated upstream archive."
+    },
+    {
+      "identity": "cmlx-metal-cpp",
+      "upstream_source": "https://developer.apple.com/metal/cpp/",
+      "vendored_version_label": "macOS15_iOS18-beta with upstream vendor patch",
+      "parent_identity": "mlx-swift",
+      "parent_revision": "19601207e9a0de51e03ee6ec0c3c5f3784275075",
+      "path": "Source/Cmlx/metal-cpp",
+      "provenance": "Tracked vendored bytes at parent revision; label comes from Source/Cmlx/vendor-README.md, not an independently authenticated upstream archive."
+    }
+  ],
+  "limitations": [
+    "Node SHASUMS signature retained but not independently authenticated; HTTPS checksum and exact archive hash verified.",
+    "No model weights or browsers acquired; their licenses remain distinct.",
+    "Exact application signing, notarization, minimum-OS compatibility and final runtime closure remain unqualified."
+  ]
+}

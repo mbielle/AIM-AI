@@ -1,0 +1,146 @@
+{
+  "notion": {
+    "file": "brand-notion.png",
+    "source": "https://github.com/makenotion.png?size=128"
+  },
+  "linear": {
+    "file": "brand-linear.png",
+    "source": "https://github.com/linear.png?size=128"
+  },
+  "figma": {
+    "file": "brand-figma.png",
+    "source": "https://github.com/figma.png?size=128"
+  },
+  "canva": {
+    "file": "brand-canva.png",
+    "source": "https://github.com/canva-sdks.png?size=128"
+  },
+  "atlassian": {
+    "file": "brand-atlassian.png",
+    "source": "https://github.com/atlassian.png?size=128"
+  },
+  "asana": {
+    "file": "brand-asana.png",
+    "source": "https://github.com/Asana.png?size=128"
+  },
+  "github": {
+    "file": "brand-github.png",
+    "source": "https://github.com/github.png?size=128"
+  },
+  "supabase": {
+    "file": "brand-supabase.png",
+    "source": "https://github.com/supabase.png?size=128"
+  },
+  "neon": {
+    "file": "brand-neon.png",
+    "source": "https://github.com/neondatabase.png?size=128"
+  },
+  "vercel": {
+    "file": "brand-vercel.png",
+    "source": "https://github.com/vercel.png?size=128"
+  },
+  "cloudflare": {
+    "file": "brand-cloudflare.png",
+    "source": "https://github.com/cloudflare.png?size=128"
+  },
+  "sentry": {
+    "file": "brand-sentry.png",
+    "source": "https://github.com/getsentry.png?size=128"
+  },
+  "stripe": {
+    "file": "brand-stripe.png",
+    "source": "https://github.com/stripe.png?size=128"
+  },
+  "paypal": {
+    "file": "brand-paypal.png",
+    "source": "https://github.com/paypal.png?size=128"
+  },
+  "square": {
+    "file": "brand-square.png",
+    "source": "https://github.com/square.png?size=128"
+  },
+  "hubspot": {
+    "file": "brand-hubspot.png",
+    "source": "https://github.com/HubSpot.png?size=128"
+  },
+  "intercom": {
+    "file": "brand-intercom.png",
+    "source": "https://github.com/intercom.png?size=128"
+  },
+  "monday": {
+    "file": "brand-monday.png",
+    "source": "https://github.com/mondaycom.png?size=128"
+  },
+  "box": {
+    "file": "brand-box.png",
+    "source": "https://github.com/box.png?size=128"
+  },
+  "webflow": {
+    "file": "brand-webflow.png",
+    "source": "https://github.com/webflow.png?size=128"
+  },
+  "wix": {
+    "file": "brand-wix.png",
+    "source": "https://github.com/wix.png?size=128"
+  },
+  "zapier": {
+    "file": "brand-zapier.png",
+    "source": "https://github.com/zapier.png?size=128"
+  },
+  "huggingface": {
+    "file": "brand-huggingface.png",
+    "source": "https://github.com/huggingface.png?size=128"
+  },
+  "context7": {
+    "file": "brand-context7.png",
+    "source": "https://github.com/upstash.png?size=128"
+  },
+  "deepwiki": {
+    "file": "brand-deepwiki.png",
+    "source": "https://github.com/CognitionAI.png?size=128"
+  },
+  "exa": {
+    "file": "brand-exa.png",
+    "source": "https://github.com/exa-labs.png?size=128"
+  },
+  "gmail": {
+    "file": "brand-gmail.png",
+    "source": "https://github.com/google.png?size=128"
+  },
+  "google-drive": {
+    "file": "brand-google-drive.png",
+    "source": "https://github.com/google.png?size=128"
+  },
+  "google-calendar": {
+    "file": "brand-google-calendar.png",
+    "source": "https://github.com/google.png?size=128"
+  },
+  "microsoft-365": {
+    "file": "brand-microsoft-365.png",
+    "source": "https://github.com/microsoft.png?size=128"
+  },
+  "slack": {
+    "file": "brand-slack.png",
+    "source": "https://github.com/slackapi.png?size=128"
+  },
+  "sambanova": {
+    "file": "brand-sambanova.png",
+    "source": "https://github.com/sambanova.png?size=128"
+  },
+  "deepinfra": {
+    "file": "brand-deepinfra.png",
+    "source": "https://github.com/deepinfra.png?size=128"
+  },
+  "nebius": {
+    "file": "brand-nebius.png",
+    "source": "https://github.com/nebius.png?size=128"
+  },
+  "novita": {
+    "file": "brand-novita.png",
+    "source": "https://github.com/novitalabs.png?size=128"
+  },
+  "venice": {
+    "file": "brand-venice.png",
+    "source": "https://github.com/veniceai.png?size=128"
+  }
+}

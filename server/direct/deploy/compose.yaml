@@ -1,0 +1,46 @@
+# Generate .private/deploy first with ../render-deployment.mjs. Linux VPS only.
+services:
+  coordinator:
+    build: ..
+    user: '${AIM_DIRECT_RUNTIME_UID:?Set runtime uid}:${AIM_DIRECT_RUNTIME_GID:?Set runtime gid}'
+    restart: unless-stopped
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    env_file: ../.private/deploy/coordinator.env
+    volumes:
+      - ../.private/deploy/state:/data
+      - ../.private/deploy/hosting-quote.json:/config/hosting-quote.json:ro
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 64
+    logging: {driver: json-file, options: {max-size: 2m, max-file: '2'}}
+  tls:
+    image: haproxy:3.2-alpine@sha256:254e6370f01cd654e0744edf607c67f33777c1b6a9dc0d4b28bcba7171460122
+    restart: unless-stopped
+    user: '${AIM_DIRECT_RUNTIME_UID:?Set runtime uid}:${AIM_DIRECT_RUNTIME_GID:?Set runtime gid}'
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    ports: ['443:8443/tcp']
+    volumes:
+      - ../.private/deploy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - ../.private/deploy/tls.pem:/config/tls.pem:ro
+    mem_limit: 64m
+    logging: {driver: json-file, options: {max-size: 2m, max-file: '2'}}
+  turn:
+    image: coturn/coturn:4.18.0-r0@sha256:bbefd3e1fdfdc0d58770fe01b581fd8b00d9f3a5580d00acb77cf719a6bc78e3
+    restart: unless-stopped
+    user: '${AIM_DIRECT_RUNTIME_UID:?Set runtime uid}:${AIM_DIRECT_RUNTIME_GID:?Set runtime gid}'
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    entrypoint: ['/bin/sh', '/config/turn-supervisor.sh']
+    ports: ['3478:3478/udp', '49160-49223:49160-49223/udp']
+    volumes:
+      - ../.private/deploy/turnserver.conf:/config/turnserver.conf:ro
+      - ./turn-supervisor.sh:/config/turn-supervisor.sh:ro
+    tmpfs: [/tmp]
+    mem_limit: 128m
+    logging: {driver: json-file, options: {max-size: 2m, max-file: '2'}}

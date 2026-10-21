@@ -1,0 +1,24 @@
+PRODUCT_NAME = AIM
+AIM_APP_BUNDLE_IDENTIFIER = com.aimai.ios
+PRODUCT_BUNDLE_IDENTIFIER = $(AIM_APP_BUNDLE_IDENTIFIER)
+MARKETING_VERSION = 2.0
+CURRENT_PROJECT_VERSION = 6
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+TARGETED_DEVICE_FAMILY = 1,2
+SWIFT_VERSION = 6.0
+SWIFT_STRICT_CONCURRENCY = complete
+// Set your own team in an untracked signing configuration for device builds.
+DEVELOPMENT_TEAM =
+CODE_SIGN_STYLE = Automatic
+
+// Valeurs vides : un clone neuf doit compiler sans configuration locale.
+AIM_SUPABASE_URL =
+AIM_SUPABASE_PUBLIC_KEY =
+
+// Enable only for an independently reviewed, externally configured web-account broker.
+AIM_LEGACY_OAUTH_BROKER_CONFIGURED = NO
+
+// L'inclusion reste optionnelle. Dans Secrets.xcconfig, encoder https:// avec
+// https:/$()/ afin que // ne commence pas un commentaire xcconfig.
+
+#include? "Secrets.xcconfig"

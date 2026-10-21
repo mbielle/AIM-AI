@@ -1,0 +1,10 @@
+# Optional MLX runtime redistribution
+
+The main application can be built without MLX. Providing `AIM_MLX_ENGINE_DIR` now requires the engine's exact `Package.resolved` plus a reviewed `Licenses/manifest.json` and its upstream license texts. The application packager verifies and copies those files before signing the runtime.
+
+Each manifest component needs `identity`, `source` (upstream repository), `revision`, and `licenses` (a list of relative `path` and `sha256` records). Include every pin from the engine's resolved package graph and all embedded or vendored dependencies, including MLX's C/C++ sources. Only set top-level `complete` to true after that inventory has been reviewed. Filenames, provenance and hashes are checked; this does not independently establish legal completeness.
+
+AIM's MIT license does not replace third-party licenses. `scripts/release/prepare-runtime-inputs.py inventory-mlx` now collects exact source notices from frozen checkouts, records embedded Cmlx sources and leaves `complete` false for review. `build-mlx-engine.sh` copies sources into a fresh private directory and compiles only the engine with frozen package resolution and signing disabled. An explicitly supplied `AIM_MLX_LICENSES_DIR` is snapshotted and validated before compilation, then copied into the product. Bundling remains blocked until a reviewed complete inventory is supplied; no historical binary is silently accepted. Model weights have separate distribution terms and are not included by this gate.
+
+
+The 20 October preparation has an independently reviewed macOS arm64 inventory (12 pins, 26 records), a real fresh engine build and reproducible local selection of an already installed Metal component. See [the provenance index](../../../docs/assets/notices/runtimes/README_FR.md) and [the report](../../../docs/qa/RUNTIMES_NOTICES_2026-10-20_FR.md). This does not establish a model inference or final application acceptance. The engine links `@rpath/libswiftCompatibilitySpan.dylib`; minimum-OS compatibility and any necessary back-deployment packaging must be checked on the exact release candidate. No deployment target is changed implicitly.

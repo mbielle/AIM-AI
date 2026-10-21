@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AIMLegacyOAuthBrokerConfigured</key>
+	<string>$(AIM_LEGACY_OAUTH_BROKER_CONFIGURED)</string>
+	<key>AIMAPNsEnvironment</key>
+	<string>$(AIM_APNS_SERVER_ENVIRONMENT)</string>
+	<key>AIMKeyboardContinuityEnabled</key>
+	<true/>
+	<key>AIMSupabasePublicKey</key>
+	<string>$(AIM_SUPABASE_PUBLIC_KEY)</string>
+	<key>AIMSupabaseURL</key>
+	<string>$(AIM_SUPABASE_URL)</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(AIM_DISPLAY_NAME)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.aimai.ios.auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aim</string>
+				<string>aimai</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>AIM uses the camera when you choose to scan a computer pairing QR code or attach a photo to a conversation. Pairing scans are not recorded.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>AIM uses Face ID to protect the app on this iPhone and to confirm changes to this protection.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>AIM.AI uses the microphone when you choose to dictate a message or start a voice conversation.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>AIM.AI shows your photo library only when you choose to attach an image to a conversation.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>AIM.AI uses speech recognition to turn your dictation into a message.</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lora-Variable.ttf</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+<key>NSLocalNetworkUsageDescription</key>
+<string>AIM connects this iPhone and Mac directly on your local network when you enable Remote pairing.</string>
+<key>NSBonjourServices</key>
+<array><string>_aimdirect._tcp</string></array>
+</dict>
+</plist>
